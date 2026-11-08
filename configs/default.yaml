@@ -1,0 +1,6 @@
+# Central configuration: paths, random seed and parameters live here, not in code.
+seed: 42
+paths:
+  raw: data/raw
+  processed: data/processed
+  figures: reports/figures
