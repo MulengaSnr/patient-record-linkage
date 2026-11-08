@@ -3,6 +3,7 @@
 CREATE SCHEMA IF NOT EXISTS raw;
 CREATE SCHEMA IF NOT EXISTS staging;
 CREATE SCHEMA IF NOT EXISTS dq;
+CREATE SCHEMA IF NOT EXISTS linked;
 
 CREATE TABLE IF NOT EXISTS raw.load_audit (
     load_id       bigint GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
@@ -64,6 +65,60 @@ CREATE TABLE IF NOT EXISTS dq.check_results (
     status     text NOT NULL CHECK (status IN ('OK', 'WARN', 'FAIL')),
     checked_at timestamptz NOT NULL DEFAULT now(),
     PRIMARY KEY (run_id, source, check_name)
+);
+
+CREATE TABLE IF NOT EXISTS linked.runs (
+    run_id            uuid PRIMARY KEY,
+    dataset           text NOT NULL,
+    threshold         double precision NOT NULL,
+    records           integer,
+    people            integer,
+    created           integer,
+    merged            integer,
+    split             integer,
+    moved_records     integer,
+    open_review_pairs integer,
+    finished_at       timestamptz NOT NULL DEFAULT now()
+);
+
+CREATE TABLE IF NOT EXISTS linked.people (
+    dataset     text NOT NULL,
+    person_key  text NOT NULL,
+    merged_into text,
+    status      text GENERATED ALWAYS AS
+                    (CASE WHEN merged_into IS NULL THEN 'active' ELSE 'merged' END) STORED,
+    created_run uuid NOT NULL REFERENCES linked.runs (run_id),
+    PRIMARY KEY (dataset, person_key)
+);
+
+CREATE TABLE IF NOT EXISTS linked.record_people (
+    dataset    text NOT NULL,
+    record_id  text NOT NULL,
+    source     text NOT NULL,
+    person_key text NOT NULL,
+    run_id     uuid NOT NULL REFERENCES linked.runs (run_id),
+    PRIMARY KEY (dataset, record_id),
+    FOREIGN KEY (dataset, person_key) REFERENCES linked.people (dataset, person_key)
+);
+
+CREATE TABLE IF NOT EXISTS linked.person_events (
+    run_id      uuid NOT NULL REFERENCES linked.runs (run_id),
+    dataset     text NOT NULL,
+    event       text NOT NULL CHECK (event IN ('created', 'merged', 'split')),
+    person_key  text NOT NULL,
+    related_key text
+);
+
+CREATE TABLE IF NOT EXISTS linked.review_queue (
+    dataset           text NOT NULL,
+    left_id           text NOT NULL,
+    right_id          text NOT NULL,
+    match_probability double precision NOT NULL,
+    status            text NOT NULL DEFAULT 'open'
+                          CHECK (status IN ('open', 'match', 'non_match')),
+    run_id            uuid NOT NULL REFERENCES linked.runs (run_id),
+    decided_at        timestamptz,
+    PRIMARY KEY (dataset, left_id, right_id)
 );
 
 -- A date only if the text really is that date in that format.

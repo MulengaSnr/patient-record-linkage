@@ -21,17 +21,20 @@ _QUERY = """
         address,
         postcode
     FROM staging.records
-    WHERE dataset = %s
+    WHERE dataset = %s AND (%s::integer IS NULL OR batch_day <= %s::integer)
     ORDER BY record_id
 """
 
 
-def read_records(conn: psycopg.Connection, dataset: str) -> pd.DataFrame:
+def read_records(
+    conn: psycopg.Connection, dataset: str, through_day: int | None = None
+) -> pd.DataFrame:
     """Staging records for one dataset, in the form Splink expects.
 
     Args:
         conn: Open connection.
         dataset: Dataset label, for example ``pilot/medium``.
+        through_day: If given, only records received up to this batch day.
 
     Returns:
         One row per record, with missing values as ``None``.
@@ -40,7 +43,7 @@ def read_records(conn: psycopg.Connection, dataset: str) -> pd.DataFrame:
         ValueError: If the dataset has no records.
     """
     with conn.cursor() as cursor:
-        cursor.execute(_QUERY, (dataset,))
+        cursor.execute(_QUERY, (dataset, through_day, through_day))
         columns = [column.name for column in cursor.description]
         rows = cursor.fetchall()
     if not rows:
