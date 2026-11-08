@@ -1,0 +1,46 @@
+# --- Secrets: never commit ---
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+secrets/
+
+# --- Data: commit only small, licensed samples deliberately ---
+data/raw/*
+data/processed/*
+data/external/*
+!data/**/.gitkeep
+*.parquet
+*.feather
+*.db
+*.sqlite
+
+# --- Models and experiment artefacts ---
+# Trained model artefacts at repo root only (src/*/models is code)
+/models/
+mlruns/
+mlartifacts/
+*.pkl
+*.joblib
+*.onnx
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+*.egg-info/
+dist/
+build/
+
+# --- Notebooks / editors / OS ---
+.ipynb_checkpoints/
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
