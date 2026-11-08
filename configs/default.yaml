@@ -24,6 +24,7 @@ linkage_data:
       nhs_present: 0.60
       date_format: "%d/%m/%Y"
       pg_date_format: DD/MM/YYYY
+      spark_date_format: dd/MM/yyyy
       fields: [nhs_number, first_name, middle_name, surname, date_of_birth, sex, address, city, postcode]
     gp:
       prefix: G
@@ -31,6 +32,7 @@ linkage_data:
       nhs_present: 0.95
       date_format: "%Y-%m-%d"
       pg_date_format: YYYY-MM-DD
+      spark_date_format: yyyy-MM-dd
       fields: [nhs_number, first_name, surname, date_of_birth, sex, address, postcode]
     lab:
       prefix: L
@@ -38,6 +40,7 @@ linkage_data:
       nhs_present: 0.30
       date_format: "%Y%m%d"
       pg_date_format: YYYYMMDD
+      spark_date_format: yyyyMMdd
       uppercase_names: true
       fields: [nhs_number, first_name, surname, date_of_birth, sex]
   # Illustrative rates chosen for this project, not estimates of real-world error.

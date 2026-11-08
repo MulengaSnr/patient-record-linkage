@@ -2,14 +2,14 @@
 
 Finding the same person across messy health records, using synthetic data, data-quality checks, Splink and Airflow.
 
-**Status:** In development. Steps 1 to 6 of 9 are built, and the linkage results below are final. The daily Airflow pipeline has only been run on the small pilot so far.
+**Status:** In development. Steps 1 to 7 of 9 are built, and the linkage results below are final. The daily Airflow pipeline has only been run on the small pilot so far.
 
 | At a glance | |
 |---|---|
 | **Problem** | Finding the same patient across hospital, GP and laboratory records without merging different people |
 | **Data** | Synthetic: three independent Synthea populations of about 11,500 people, with errors injected at three levels |
 | **Result** | Medium error, held-out test set: **99.90% precision and 96.34% recall**, against 99.22% and 85.81% for exact-match rules |
-| **Stack** | Python, Splink 5 on DuckDB, PostgreSQL 17, Airflow 3.3, Docker |
+| **Stack** | Python, Splink 5 on DuckDB, PostgreSQL 17, Airflow 3.3, PySpark 4, Docker |
 
 ## The problem
 The same patient often appears under several records, because of typos, changed names, missing dates and different hospitals. Duplicates split a patient's history, and wrongly merging two people is worse. This project links records probabilistically, gives each person a stable ID, and measures how accurate the linkage is and for whom.
@@ -69,6 +69,11 @@ The `patient_linkage_daily` DAG processes one day at a time: `load_and_check` lo
 
 Airflow runs as one container using about 1.0 GB idle and 1.4 GB at peak on the pilot. It has its own Python environment apart from the project's, because the two need different package versions. The truth table is never mounted into the container.
 
+## PySpark standardisation
+`src/patient_linkage/spark/standardise.py` is a second implementation of the warehouse's standardisation rules, written with native Spark column functions (no Python UDFs) and run in local mode. It reads the source CSVs and writes Parquet partitioned by source. It sits outside the nightly path on purpose, because the data is small enough that PostgreSQL is the simpler tool.
+
+`make spark` fails if a single value differs from `staging.records`. The output was identical on all seven datasets compared: `pilot/medium` and every error level of `train` and `tune`, up to 26,600 records. The held-out `test` population was left out. It takes about 22 seconds for 26,000 records and 21 seconds for 2,500, so nearly all of that time is Spark's fixed overhead.
+
 ## Run it
 ```bash
 uv sync
@@ -92,7 +97,6 @@ make linkage TRAIN=train/medium EVAL=test/medium THRESHOLD=0.99 FINAL=1
 The last command refuses to run a second time for the same dataset, because the test population is used once.
 
 ## Next steps
-- Step 7: one PySpark standardisation job
 - Step 8: BI marts and a Power BI report
 - Step 9: finish the documentation and add a screenshot
 - Run the daily Airflow pipeline at full population size
