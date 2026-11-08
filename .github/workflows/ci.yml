@@ -8,6 +8,21 @@ on:
 jobs:
   lint-and-test:
     runs-on: ubuntu-latest
+    services:
+      postgres:
+        # Same image as compose.yaml.
+        image: postgres:17-alpine3.24@sha256:3540c0362c809df084ffac0ae69fe794515f9de92692f02178bcdce0ef0302ac
+        env:
+          POSTGRES_USER: linkage
+          POSTGRES_PASSWORD: ci-only-password
+          POSTGRES_DB: linkage_test
+        ports:
+          - 5433:5432
+        options: >-
+          --health-cmd "pg_isready -U linkage -d linkage_test"
+          --health-interval 5s --health-timeout 3s --health-retries 12
+    env:
+      WAREHOUSE_TEST_DSN: postgresql://linkage:ci-only-password@127.0.0.1:5433/linkage_test
     steps:
       - uses: actions/checkout@v4
       - uses: astral-sh/setup-uv@v6
