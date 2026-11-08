@@ -1,6 +1,6 @@
 # Data
 
-All data here is **synthetic**. Nothing is committed (see `.gitignore`). Synthea output is kept outside the repo in `~/synthea`, and `make sources POP=<population>` rebuilds everything else.
+All data here is **synthetic**. Nothing is committed (see `.gitignore`). Synthea output is kept outside the repo in `~/synthea`. `scripts/generate_populations.sh` generates the train, tune and test populations in the background and can be re-run after an interruption, and `make sources POP=<population>` rebuilds everything else.
 
 ## Provenance and licences
 

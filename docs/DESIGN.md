@@ -45,7 +45,7 @@ This project builds a repeatable pipeline that takes messy patient records from 
 Rules are fixed here, before any results exist.
 
 - **Baseline:** deterministic rules (exact identifier, then exact surname, first name and date of birth). Splink has to be worth its extra complexity.
-- **Metrics:** pairwise precision, recall and F1, plus cluster-level measures: the share of people split across clusters and the share of clusters that merge different people.
+- **Metrics:** pairwise precision, recall and F1, plus cluster-level measures: the share of people with several records who are split across clusters, and the share of all people placed in a cluster with someone else.
 - **False merges are treated as the more serious error,** so thresholds are chosen for high precision and recall is reported alongside.
 - **Three independent populations by seed:** one for training the model, one for choosing thresholds, and one used **once** for final results.
 - **Threshold rule:** on the tune population, use the lowest swept threshold reaching 99.5% pairwise precision. This target was set before any linkage had been run. The test population then gets that threshold, and the code refuses a second final run or a threshold chosen on the test data.
@@ -75,7 +75,7 @@ Rules are fixed here, before any results exist.
 | D15 | A failed batch keeps its check results but none of its data (added in step 6) | Corrected files reuse record IDs, so rows from a failed load would block the correction for good | Upserting raw rows (raw would no longer be as received) |
 
 ## 7. Machine limits
-The VM has 4 cores and 7.3 GB of RAM. Measured in step 6, Airflow uses about 1.0 GB idle and peaked at 1.4 GB while processing the pilot, leaving about 2 GB available, with no out-of-memory events. Memory at the full population size is still unmeasured. If it does not fit, the population shrinks before anything else changes. The record count is set in step 2 from measured generation and linkage times.
+The VM has 4 cores and 7.3 GB of RAM. Measured in step 6, Airflow uses about 1.0 GB idle and peaked at 1.4 GB while processing the pilot, leaving about 2 GB available, with no out-of-memory events. At full size (about 11,500 people and 27,000 records), one linkage run peaked at about 670 MB and took about 20 seconds, so the population did not need shrinking. Airflow's memory at full size is still unmeasured.
 
 ## 8. Cost
 **£0.** Everything runs locally and all the tools are open source. No cloud resources are created.
