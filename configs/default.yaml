@@ -23,18 +23,21 @@ linkage_data:
       coverage: 0.70
       nhs_present: 0.60
       date_format: "%d/%m/%Y"
+      pg_date_format: DD/MM/YYYY
       fields: [nhs_number, first_name, middle_name, surname, date_of_birth, sex, address, city, postcode]
     gp:
       prefix: G
       coverage: 0.85
       nhs_present: 0.95
       date_format: "%Y-%m-%d"
+      pg_date_format: YYYY-MM-DD
       fields: [nhs_number, first_name, surname, date_of_birth, sex, address, postcode]
     lab:
       prefix: L
       coverage: 0.50
       nhs_present: 0.30
       date_format: "%Y%m%d"
+      pg_date_format: YYYYMMDD
       uppercase_names: true
       fields: [nhs_number, first_name, surname, date_of_birth, sex]
   # Illustrative rates chosen for this project, not estimates of real-world error.
@@ -99,3 +102,19 @@ linkage_data:
       nhs_digit_typo: 0.03
       nhs_wrong_person: 0.008
       duplicate_within_source: 0.12
+
+# Thresholds for the data-quality gate. Set to pass the high error level and to
+# stop a broken feed. A share is the fraction of a source's records affected.
+quality:
+  min_records: 1
+  missing_share:
+    first_name: {warn: 0.01, fail: 0.05}
+    surname: {warn: 0.01, fail: 0.05}
+    date_of_birth: {warn: 0.05, fail: 0.20}
+    sex: {warn: 0.05, fail: 0.20}
+    address: {warn: 0.15, fail: 0.40}
+    # About a quarter of Synthea's people have no usable postcode.
+    postcode: {warn: 0.40, fail: 0.60}
+  dob_unparseable_share: {warn: 0.001, fail: 0.02}
+  dob_in_future_share: {warn: 0.0001, fail: 0.001}
+  nhs_invalid_share: {warn: 0.02, fail: 0.10}

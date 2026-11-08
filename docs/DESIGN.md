@@ -65,6 +65,7 @@ Rules are fixed here, before any results exist.
 | D7 | Full re-link is the default. Incremental linkage is added only if Splink 5's experimental `predict_between` proves reliable in testing | Avoids depending on an experimental feature | Incremental linkage from the start |
 | D8 | PySpark limited to one standardisation job in local mode, outside the nightly path | Gives real PySpark evidence without overloading the VM | Spark throughout; leaving it out (Spark is a known gap) |
 | D9 | Power BI built on the Windows host from exported mart files, with screenshots and the `.pbix` committed | Power BI Desktop is Windows-only | Superset or Streamlit (Power BI is what NHS adverts ask for) |
+| D10 | PostgreSQL 17, pinned by digest (added in step 3) | Airflow will share this server in step 6, and the older major version is the more cautious choice. Compatibility is confirmed in step 6 | PostgreSQL 18 |
 
 ## 7. Machine limits
 The VM has 4 cores and 7.3 GB of RAM. Airflow's memory use has **not been measured yet**, and step 6 measures it first. If it does not fit, the population shrinks before anything else changes. The record count is set in step 2 from measured generation and linkage times.
