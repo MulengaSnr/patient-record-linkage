@@ -7,6 +7,8 @@ license = { text = "MIT" }
 authors = [{ name = "Enock Mulenga" }]
 requires-python = ">=3.12,<3.13"
 dependencies = [
+    "numpy>=2.0",
+    "pandas>=2.2",
     "pyyaml>=6.0",
 ]
 

@@ -10,6 +10,7 @@ secrets/
 data/raw/*
 data/processed/*
 data/external/*
+data/truth/*
 !data/**/.gitkeep
 *.parquet
 *.feather
