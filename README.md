@@ -2,7 +2,7 @@
 
 Finding the same person across messy health records, using synthetic data, data-quality checks, Splink and Airflow.
 
-**Status:** In development, step 3 of 9 (warehouse and data-quality gate). No linkage results yet.
+**Status:** In development, step 4 of 9 (Splink model and evaluation). Code is built and tested on a small pilot. **No linkage results yet:** those need the three full populations.
 
 ## The problem
 The same patient often appears under several records, because of typos, changed names, missing dates and different hospitals. Duplicates split a patient's history, and wrongly merging two people is worse. This project links records probabilistically, gives each person a stable ID, and measures how accurate the linkage is and for whom.
@@ -31,7 +31,8 @@ cp .env.example .env   # then choose a password
 make db-up             # local PostgreSQL in Docker
 make check             # lint + tests (database tests need db-up)
 make sources POP=pilot # needs Synthea output: see data/README.md
-make warehouse POP=pilot LEVEL=low
+make warehouse POP=pilot LEVEL=medium
+make linkage TRAIN=pilot/medium EVAL=pilot/medium
 ```
 
 ## Author

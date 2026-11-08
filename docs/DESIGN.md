@@ -48,6 +48,8 @@ Rules are fixed here, before any results exist.
 - **Metrics:** pairwise precision, recall and F1, plus cluster-level measures: the share of people split across clusters and the share of clusters that merge different people.
 - **False merges are treated as the more serious error,** so thresholds are chosen for high precision and recall is reported alongside.
 - **Three independent populations by seed:** one for training the model, one for choosing thresholds, and one used **once** for final results.
+- **Threshold rule:** on the tune population, use the lowest swept threshold reaching 99.5% pairwise precision. This target was set before any linkage had been run. The test population then gets that threshold, and the code refuses a second final run or a threshold chosen on the test data.
+- **The 1,145-person pilot is for building the code only.** Nothing measured on it is reported as a result.
 - **Training does not use truth.** Splink's parameters are estimated unsupervised, as they would have to be on real data.
 - **Fairness:** error rates by sex, age band and ethnicity, because linkage errors are known to fall unevenly across groups and can bias later analysis.
 - **Sensitivity:** results at all three error levels.
