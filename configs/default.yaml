@@ -118,3 +118,32 @@ quality:
   dob_unparseable_share: {warn: 0.001, fail: 0.02}
   dob_in_future_share: {warn: 0.0001, fail: 0.001}
   nhs_invalid_share: {warn: 0.02, fail: 0.10}
+
+linkage:
+  seed: 42
+  duckdb_memory_limit: 3GB
+  duckdb_threads: 3
+  # Pairs below this probability are not kept. Clustering chooses the real threshold.
+  min_pair_probability: 0.05
+  # Chosen on the tune population: the lowest threshold reaching this precision.
+  target_precision: 0.995
+  threshold_sweep: [0.5, 0.7, 0.8, 0.9, 0.95, 0.99, 0.999, 0.9999]
+  prior_rules:
+    - [nhs_number]
+    - [first_name, surname, date_of_birth]
+  prior_recall: 0.7
+  u_max_pairs: 1.0e+7
+  em_blocking:
+    - [date_of_birth]
+    - [first_name, surname]
+  blocking_rules:
+    - [nhs_number]
+    - [first_name, surname]
+    - [date_of_birth, surname]
+    - [date_of_birth, first_name]
+    - [postcode, surname]
+    - [postcode, date_of_birth]
+    - [address]
+  baseline_rules:
+    - [nhs_number]
+    - [first_name, surname, date_of_birth]

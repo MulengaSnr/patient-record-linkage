@@ -12,6 +12,7 @@ dependencies = [
     "pandera[pandas]>=0.35",
     "psycopg[binary]>=3.3",
     "pyyaml>=6.0",
+    "splink==5.0.0",
 ]
 
 [dependency-groups]

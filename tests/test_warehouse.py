@@ -1,18 +1,11 @@
-import os
-from pathlib import Path
-
 import numpy as np
 import pandas as pd
-import psycopg
 import pytest
 from pandera.errors import SchemaErrors
-from test_generate import REFERENCE, SETTINGS, write_patients
 
 from patient_linkage.config import PROJECT_ROOT, load_config
-from patient_linkage.data.generate import build_sources
 from patient_linkage.data.population import (
     is_valid_nhs_number,
-    load_people,
     reserved_range_nhs_numbers,
 )
 from patient_linkage.warehouse import pipeline, quality
@@ -90,44 +83,6 @@ def test_warehouse_code_never_reads_the_truth_table():
         text = file.read_text()
         assert "truth" not in text.lower(), file
         assert "person_id" not in text, file
-
-
-@pytest.fixture
-def conn():
-    dsn = os.environ.get("WAREHOUSE_TEST_DSN")
-    if not dsn:
-        if os.environ.get("CI"):
-            pytest.fail("WAREHOUSE_TEST_DSN must be set in CI")
-        pytest.skip("WAREHOUSE_TEST_DSN not set")
-    try:
-        connection = psycopg.connect(dsn)
-    except psycopg.OperationalError as error:
-        if os.environ.get("CI"):
-            raise
-        pytest.skip(f"Test database not reachable: {error}")
-    with connection:
-        connection.execute("DROP SCHEMA IF EXISTS raw, staging, dq CASCADE")
-        connection.commit()
-        apply_schema(connection)
-        connection.commit()
-        yield connection
-
-
-@pytest.fixture
-def folder(tmp_path) -> Path:
-    people = load_people(write_patients(tmp_path, 400), np.random.default_rng(1))
-    tables, _ = build_sources(
-        people,
-        SETTINGS,
-        SETTINGS["error_levels"]["high"],
-        REFERENCE,
-        np.random.default_rng(2),
-    )
-    out = tmp_path / "sources"
-    out.mkdir()
-    for name, table in tables.items():
-        table.to_csv(out / f"{name}.csv", index=False)
-    return out
 
 
 def scalar(conn, query, *params):
