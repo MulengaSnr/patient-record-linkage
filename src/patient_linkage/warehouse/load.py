@@ -173,6 +173,11 @@ def standardise(
     ).rowcount
 
 
+def frame_checksum(frame: pd.DataFrame) -> str:
+    """SHA-256 of a frame's contents, for loads of part of a file."""
+    return hashlib.sha256(frame.to_csv(index=False).encode()).hexdigest()
+
+
 def file_checksum(path: Path | str) -> str:
     """SHA-256 of a file."""
     return hashlib.sha256(Path(path).read_bytes()).hexdigest()

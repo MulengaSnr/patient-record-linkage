@@ -1,7 +1,7 @@
 -include .env
 export
 
-.PHONY: setup lint format test check sources db-up db-down warehouse linkage publish
+.PHONY: setup lint format test check sources db-up db-down warehouse linkage publish airflow-up airflow-down airflow-resume
 
 setup:   ## Create the virtual environment and install dependencies
 	uv sync
@@ -36,3 +36,13 @@ linkage: ## Train and evaluate linkage (TRAIN=pilot/medium EVAL=pilot/medium)
 
 publish: ## Assign stable person keys and fill the review queue (DATASET=pilot/medium)
 	uv run python -m patient_linkage.linkage.publish --dataset $(or $(DATASET),pilot/medium) --results data/processed/linkage/$(subst /,-,$(or $(DATASET),pilot/medium))__$(subst /,-,$(or $(DATASET),pilot/medium)).json $(if $(DAY),--through-day $(DAY))
+
+airflow-up: ## Start Airflow on http://127.0.0.1:8080 (about 1 GB of memory)
+	docker compose --profile airflow up -d --build airflow
+
+airflow-down: ## Stop Airflow
+	docker compose --profile airflow stop airflow
+
+airflow-resume: ## After fixing a failed day: clear it and restart (DAY=2026-10-12)
+	docker compose --profile airflow exec -T airflow airflow tasks clear patient_linkage_daily -s $(DAY) -e $(DAY) -y
+	docker compose --profile airflow exec -T airflow airflow dags unpause patient_linkage_daily -y

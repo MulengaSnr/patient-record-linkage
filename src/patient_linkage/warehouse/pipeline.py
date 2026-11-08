@@ -5,7 +5,7 @@ Run from the project root (with the database up):
     uv run python -m patient_linkage.warehouse.pipeline --population pilot --level low
 
 Exits with an error if the gate fails, so an orchestrator stops at this step.
-Results are committed first, so a failed run still leaves its evidence.
+A failed run keeps its check results but none of its data.
 """
 
 from __future__ import annotations
@@ -25,6 +25,7 @@ from patient_linkage.warehouse.load import (
     connect,
     file_checksum,
     file_schema,
+    frame_checksum,
     load_source,
     read_source,
     standardise,
@@ -40,11 +41,38 @@ from patient_linkage.warehouse.quality import (
 logger = logging.getLogger(__name__)
 
 
+def check_previous_day_loaded(
+    conn: psycopg.Connection, dataset: str, batch_day: int
+) -> None:
+    """Refuse a day whose previous day has not been loaded.
+
+    Args:
+        conn: Open connection.
+        dataset: Dataset label.
+        batch_day: The day about to be loaded.
+
+    Raises:
+        DataQualityError: If day ``batch_day - 1`` has no records.
+    """
+    if batch_day <= 1:
+        return
+    previous = conn.execute(
+        "SELECT 1 FROM raw.records WHERE dataset = %s AND batch_day = %s LIMIT 1",
+        (dataset, str(batch_day - 1)),
+    ).fetchone()
+    if previous is None:
+        raise DataQualityError(
+            f"{dataset}: day {batch_day - 1} is not loaded, so day {batch_day} "
+            "cannot be loaded yet"
+        )
+
+
 def run(
     conn: psycopg.Connection,
     dataset: str,
     folder: Path,
     config: dict[str, Any],
+    batch_day: int | None = None,
 ) -> list[CheckResult]:
     """Validate, load, standardise and check every source in a folder.
 
@@ -53,6 +81,7 @@ def run(
         dataset: Dataset label, for example ``pilot/low``.
         folder: Folder holding one CSV per source.
         config: Parsed configuration.
+        batch_day: If given, load and judge only this day's records.
 
     Returns:
         All check results.
@@ -62,6 +91,9 @@ def run(
     """
     sources = config["linkage_data"]["sources"]
     apply_schema(conn)
+    conn.commit()
+    if batch_day is not None:
+        check_previous_day_loaded(conn, dataset, batch_day)
     frames = {}
     for name, source in sources.items():
         path = folder / f"{name}.csv"
@@ -73,7 +105,11 @@ def run(
             raise DataQualityError(
                 f"{name}: file failed validation: {cases}"
             ) from error
-        frames[name] = (frame, file_checksum(path))
+        if batch_day is None:
+            frames[name] = (frame, file_checksum(path))
+        else:
+            day = frame[frame["batch_day"].astype(int) == batch_day]
+            frames[name] = (day, frame_checksum(day))
 
     results: list[CheckResult] = []
     for name, (frame, checksum) in frames.items():
@@ -81,9 +117,13 @@ def run(
         written = standardise(conn, dataset, name, sources[name]["pg_date_format"])
         logger.info("%s: %d new raw rows, %d staged", name, inserted, written)
         results += check_source(
-            conn, dataset, name, sources[name]["fields"], config["quality"]
+            conn, dataset, name, sources[name]["fields"], config["quality"], batch_day
         )
-    record_results(conn, dataset, results)
+    if any(result.status == "FAIL" for result in results):
+        # Keep the evidence but none of the data, or a corrected file with the
+        # same record IDs could never replace the bad rows.
+        conn.rollback()
+    record_results(conn, dataset, results, batch_day)
     conn.commit()
     enforce(results)
     return results
@@ -94,10 +134,12 @@ def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     parser.add_argument("--population", required=True)
     parser.add_argument("--level", required=True)
+    parser.add_argument("--label", help="dataset label; default is population/level")
+    parser.add_argument("--batch-day", type=int, help="load only this day's records")
     args = parser.parse_args()
     logging.basicConfig(level=logging.INFO, format="%(asctime)s %(message)s")
     config = load_config()
-    dataset = f"{args.population}/{args.level}"
+    dataset = args.label or f"{args.population}/{args.level}"
     folder = (
         PROJECT_ROOT
         / config["paths"]["processed"]
@@ -107,7 +149,7 @@ def main() -> None:
     )
     with connect() as conn:
         try:
-            results = run(conn, dataset, folder, config)
+            results = run(conn, dataset, folder, config, args.batch_day)
         except DataQualityError as error:
             logger.error("%s", error)
             sys.exit(1)

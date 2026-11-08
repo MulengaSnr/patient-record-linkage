@@ -29,6 +29,19 @@ def test_grade(value, expected):
     assert quality.grade(value, 0.05, 0.1) == expected
 
 
+@pytest.mark.parametrize(
+    ("status", "affected", "expected"),
+    [
+        ("FAIL", 1, "WARN"),
+        ("FAIL", 4.9, "WARN"),
+        ("FAIL", 5, "FAIL"),
+        ("WARN", 1, "WARN"),
+    ],
+)
+def test_a_failure_needs_enough_affected_records(status, affected, expected):
+    assert quality._downgrade_small(status, affected, 5) == expected
+
+
 def test_enforce_names_every_failure():
     results = [
         quality.CheckResult("gp", "missing_surname", 0.6, 0.01, 0.05, "FAIL"),
@@ -229,3 +242,98 @@ def test_no_identity_columns_exist_in_the_warehouse(conn, folder):
         )
     }
     assert not names & {"person_id", "errors", "race", "ethnicity", "age_band"}
+
+
+def batch_days(folder):
+    return sorted(
+        {int(d) for s in SOURCES for d in read_source(folder / f"{s}.csv")["batch_day"]}
+    )
+
+
+@pytest.mark.integration
+def test_batches_load_only_their_own_day_and_add_up(conn, folder):
+    days = batch_days(folder)
+    assert days == list(range(1, days[-1] + 1))
+    pipeline.run(conn, "t/daily", folder, CONFIG, batch_day=days[0])
+    first = scalar(conn, "SELECT count(*) FROM raw.records")
+    expected = sum(
+        (read_source(folder / f"{s}.csv")["batch_day"] == str(days[0])).sum()
+        for s in SOURCES
+    )
+    assert first == expected
+    for day in days[1:]:
+        pipeline.run(conn, "t/daily", folder, CONFIG, batch_day=day)
+    total = sum(len(read_source(folder / f"{s}.csv")) for s in SOURCES)
+    assert scalar(conn, "SELECT count(*) FROM raw.records") == total
+
+
+@pytest.mark.integration
+def test_reloading_a_batch_adds_nothing(conn, folder):
+    day = batch_days(folder)[0]
+    pipeline.run(conn, "t/daily", folder, CONFIG, batch_day=day)
+    before = scalar(conn, "SELECT count(*) FROM raw.records")
+    pipeline.run(conn, "t/daily", folder, CONFIG, batch_day=day)
+    assert scalar(conn, "SELECT count(*) FROM raw.records") == before
+
+
+@pytest.mark.integration
+def test_one_bad_day_cannot_hide_behind_good_days(conn, folder):
+    days = batch_days(folder)
+    for day in days[:-1]:
+        pipeline.run(conn, "t/daily", folder, CONFIG, batch_day=day)
+    gp = pd.read_csv(folder / "gp.csv", dtype=str)
+    gp.loc[gp["batch_day"] == str(days[-1]), "surname"] = None
+    gp.to_csv(folder / "gp.csv", index=False)
+    with pytest.raises(quality.DataQualityError, match="gp.missing_surname"):
+        pipeline.run(conn, "t/daily", folder, CONFIG, batch_day=days[-1])
+    whole = quality.check_source(
+        conn, "t/daily", "gp", SOURCES["gp"]["fields"], CONFIG["quality"]
+    )
+    surname = next(r for r in whole if r.check_name == "missing_surname")
+    assert surname.value < 0.2
+
+
+@pytest.mark.integration
+def test_results_record_which_batch_was_judged(conn, folder):
+    day = batch_days(folder)[0]
+    pipeline.run(conn, "t/daily", folder, CONFIG, batch_day=day)
+    assert scalar(conn, "SELECT min(batch_day) FROM dq.check_results") == day
+
+
+@pytest.mark.integration
+def test_a_failed_batch_leaves_evidence_but_no_data(conn, folder):
+    gp = pd.read_csv(folder / "gp.csv", dtype=str)
+    gp["surname"] = None
+    gp.to_csv(folder / "gp.csv", index=False)
+    with pytest.raises(quality.DataQualityError):
+        pipeline.run(conn, "t/bad", folder, CONFIG)
+    assert scalar(conn, "SELECT count(*) FROM raw.records") == 0
+    assert scalar(conn, "SELECT count(*) FROM staging.records") == 0
+    assert scalar(conn, "SELECT count(*) FROM raw.load_audit") == 0
+    assert scalar(conn, "SELECT count(*) FROM dq.check_results WHERE status='FAIL'") > 0
+
+
+@pytest.mark.integration
+def test_a_corrected_batch_replaces_a_failed_one(conn, folder):
+    day = batch_days(folder)[0]
+    good = pd.read_csv(folder / "gp.csv", dtype=str)
+    bad = good.copy()
+    bad.loc[bad["batch_day"] == str(day), "surname"] = None
+    bad.to_csv(folder / "gp.csv", index=False)
+    with pytest.raises(quality.DataQualityError):
+        pipeline.run(conn, "t/fix", folder, CONFIG, batch_day=day)
+    good.to_csv(folder / "gp.csv", index=False)
+    pipeline.run(conn, "t/fix", folder, CONFIG, batch_day=day)
+    missing = scalar(
+        conn,
+        "SELECT count(*) FROM staging.records WHERE source='gp' AND surname IS NULL",
+    )
+    assert missing == 0
+    assert scalar(conn, "SELECT count(*) FROM staging.records WHERE source='gp'") > 0
+
+
+@pytest.mark.integration
+def test_a_day_cannot_be_loaded_before_the_previous_day(conn, folder):
+    with pytest.raises(quality.DataQualityError, match="day 4 is not loaded"):
+        pipeline.run(conn, "t/daily", folder, CONFIG, batch_day=5)
+    assert scalar(conn, "SELECT count(*) FROM raw.records") == 0

@@ -121,6 +121,9 @@ CREATE TABLE IF NOT EXISTS linked.review_queue (
     PRIMARY KEY (dataset, left_id, right_id)
 );
 
+-- Which batch a check judged. NULL means the whole dataset.
+ALTER TABLE dq.check_results ADD COLUMN IF NOT EXISTS batch_day integer;
+
 -- A date only if the text really is that date in that format.
 CREATE OR REPLACE FUNCTION staging.safe_date(value text, format text)
 RETURNS date LANGUAGE plpgsql IMMUTABLE AS $$

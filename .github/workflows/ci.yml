@@ -36,3 +36,16 @@ jobs:
           uv run ruff format --check .
       - name: Test
         run: uv run pytest --cov=src --cov-report=term-missing
+
+  # Parses the DAG with the real Airflow version and checks its shape.
+  airflow-dag:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check the DAG
+        run: >-
+          timeout 180 docker run --rm -v "$PWD:/repo:ro"
+          -e AIRFLOW__CORE__LOAD_EXAMPLES=False --entrypoint python
+          apache/airflow:3.3.2-python3.12@sha256:9df9c8be4096b9cc626bd7cb1f2b8c712eef66c59c615f8c7e6200871ca10bd1
+          /repo/scripts/check_dag.py /repo/airflow/dags
+

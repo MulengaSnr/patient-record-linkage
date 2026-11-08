@@ -2,7 +2,7 @@
 
 Finding the same person across messy health records, using synthetic data, data-quality checks, Splink and Airflow.
 
-**Status:** In development, step 5 of 9 (stable person IDs and review queue). Code for steps 4 and 5 is built and tested on a small pilot. **No linkage results yet:** those need the three full populations.
+**Status:** In development, step 6 of 9 (Airflow orchestration). Code for steps 4 to 6 is built and tested on a small pilot. **No linkage results yet:** those need the three full populations.
 
 ## The problem
 The same patient often appears under several records, because of typos, changed names, missing dates and different hospitals. Duplicates split a patient's history, and wrongly merging two people is worse. This project links records probabilistically, gives each person a stable ID, and measures how accurate the linkage is and for whom.
@@ -29,6 +29,17 @@ Splink's cluster IDs can change on every run, so each cluster inherits the exist
 
 Pairs that scored fairly high but were not linked go to `linked.review_queue` for a person to check. A decided pair is never reopened. **Decisions are stored but do not yet change the clusters,** and there is no review screen.
 
+## Daily orchestration with Airflow
+The `patient_linkage_daily` DAG processes one day at a time: `load_and_check` loads that day's records and applies the quality gate, then `link_and_publish` re-links everything received so far and updates the person keys. Daily loads are incremental, but linkage is a full re-link (design decision D7).
+
+**Failure handling, tested by planting a corrupted feed on day 12 of 30:**
+- The gate judges each day on its own, so one bad day cannot hide behind weeks of good data.
+- The failed day's data is rolled back but its check results are kept, so a corrected file can replace it.
+- One failed run pauses the DAG, so no later day starts.
+- After fixing the file, `make airflow-resume DAY=2026-10-12` restarts from the failed day. In the test, all 30 days then completed.
+
+Airflow runs as one container using about 1.0 GB idle and 1.4 GB at peak on the pilot. It has its own Python environment apart from the project's, because the two need different package versions. The truth table is never mounted into the container.
+
 ## Run it
 ```bash
 uv sync
@@ -39,6 +50,7 @@ make sources POP=pilot # needs Synthea output: see data/README.md
 make warehouse POP=pilot LEVEL=medium
 make linkage TRAIN=pilot/medium EVAL=pilot/medium
 make publish DATASET=pilot/medium
+make airflow-up        # Airflow on http://127.0.0.1:8080, then unpause the DAG
 ```
 
 ## Author
