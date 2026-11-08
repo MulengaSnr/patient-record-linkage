@@ -25,7 +25,7 @@ def conn():
             raise
         pytest.skip(f"Test database not reachable: {error}")
     with connection:
-        connection.execute("DROP SCHEMA IF EXISTS raw, staging, dq CASCADE")
+        connection.execute("DROP SCHEMA IF EXISTS raw, staging, dq, linked CASCADE")
         connection.commit()
         apply_schema(connection)
         connection.commit()

@@ -1,7 +1,7 @@
 -include .env
 export
 
-.PHONY: setup lint format test check sources db-up db-down warehouse linkage
+.PHONY: setup lint format test check sources db-up db-down warehouse linkage publish
 
 setup:   ## Create the virtual environment and install dependencies
 	uv sync
@@ -33,3 +33,6 @@ warehouse: ## Load sources and apply the quality gate (POP=pilot LEVEL=low)
 
 linkage: ## Train and evaluate linkage (TRAIN=pilot/medium EVAL=pilot/medium)
 	uv run python -m patient_linkage.linkage.run --train $(or $(TRAIN),pilot/medium) --evaluate $(or $(EVAL),pilot/medium)
+
+publish: ## Assign stable person keys and fill the review queue (DATASET=pilot/medium)
+	uv run python -m patient_linkage.linkage.publish --dataset $(or $(DATASET),pilot/medium) --results data/processed/linkage/$(subst /,-,$(or $(DATASET),pilot/medium))__$(subst /,-,$(or $(DATASET),pilot/medium)).json $(if $(DAY),--through-day $(DAY))
