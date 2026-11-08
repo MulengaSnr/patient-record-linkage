@@ -4,3 +4,98 @@ paths:
   raw: data/raw
   processed: data/processed
   figures: reports/figures
+
+linkage_data:
+  # Synthea output lives outside the repo. SYNTHEA_DIR overrides this.
+  synthea_dir: ~/synthea
+  # Synthea's -r option. Kept here so ages are calculated at the same date.
+  reference_date: "2026-11-01"
+  truth_dir: data/truth         # gitignored, and never read by the pipeline
+  batch_days: 30
+  populations:
+    pilot: {folder: pilot, seed: 42}
+    train: {folder: train, seed: 101}
+    tune: {folder: tune, seed: 202}
+    test: {folder: test, seed: 303}
+  sources:
+    hospital:
+      prefix: H
+      coverage: 0.70
+      nhs_present: 0.60
+      date_format: "%d/%m/%Y"
+      fields: [nhs_number, first_name, middle_name, surname, date_of_birth, sex, address, city, postcode]
+    gp:
+      prefix: G
+      coverage: 0.85
+      nhs_present: 0.95
+      date_format: "%Y-%m-%d"
+      fields: [nhs_number, first_name, surname, date_of_birth, sex, address, postcode]
+    lab:
+      prefix: L
+      coverage: 0.50
+      nhs_present: 0.30
+      date_format: "%Y%m%d"
+      uppercase_names: true
+      fields: [nhs_number, first_name, surname, date_of_birth, sex]
+  # Illustrative rates chosen for this project, not estimates of real-world error.
+  error_levels:
+    low:
+      first_name_nickname: 0.01
+      first_name_typo: 0.01
+      first_name_initial: 0.005
+      surname_maiden: 0.05
+      surname_typo: 0.01
+      names_swapped: 0.002
+      dob_day_month_swap: 0.003
+      dob_typo: 0.003
+      dob_missing: 0.002
+      sex_missing: 0.002
+      sex_wrong: 0.001
+      moved_address: 0.05
+      address_typo: 0.01
+      address_missing: 0.02
+      postcode_typo: 0.01
+      postcode_missing: 0.02
+      nhs_digit_typo: 0.003
+      nhs_wrong_person: 0.0005
+      duplicate_within_source: 0.02
+    medium:
+      first_name_nickname: 0.03
+      first_name_typo: 0.03
+      first_name_initial: 0.01
+      surname_maiden: 0.15
+      surname_typo: 0.03
+      names_swapped: 0.005
+      dob_day_month_swap: 0.01
+      dob_typo: 0.01
+      dob_missing: 0.01
+      sex_missing: 0.01
+      sex_wrong: 0.003
+      moved_address: 0.12
+      address_typo: 0.03
+      address_missing: 0.05
+      postcode_typo: 0.02
+      postcode_missing: 0.05
+      nhs_digit_typo: 0.01
+      nhs_wrong_person: 0.002
+      duplicate_within_source: 0.05
+    high:
+      first_name_nickname: 0.06
+      first_name_typo: 0.08
+      first_name_initial: 0.03
+      surname_maiden: 0.30
+      surname_typo: 0.08
+      names_swapped: 0.015
+      dob_day_month_swap: 0.025
+      dob_typo: 0.03
+      dob_missing: 0.03
+      sex_missing: 0.03
+      sex_wrong: 0.01
+      moved_address: 0.25
+      address_typo: 0.08
+      address_missing: 0.12
+      postcode_typo: 0.05
+      postcode_missing: 0.12
+      nhs_digit_typo: 0.03
+      nhs_wrong_person: 0.008
+      duplicate_within_source: 0.12

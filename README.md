@@ -2,7 +2,7 @@
 
 Finding the same person across messy health records, using synthetic data, data-quality checks, Splink and Airflow.
 
-**Status:** In development, step 1 of 9 (scaffold and design). No results yet.
+**Status:** In development, step 2 of 9 (synthetic sources with known truth). No linkage results yet.
 
 ## The problem
 The same patient often appears under several records, because of typos, changed names, missing dates and different hospitals. Duplicates split a patient's history, and wrongly merging two people is worse. This project links records probabilistically, gives each person a stable ID, and measures how accurate the linkage is and for whom.
