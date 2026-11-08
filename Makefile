@@ -1,7 +1,7 @@
 -include .env
 export
 
-.PHONY: setup lint format test check sources db-up db-down warehouse linkage publish airflow-up airflow-down airflow-resume
+.PHONY: setup lint format test check sources db-up db-down warehouse linkage publish spark airflow-up airflow-down airflow-resume
 
 setup:   ## Create the virtual environment and install dependencies
 	uv sync
@@ -36,6 +36,9 @@ linkage: ## Train and evaluate linkage (TRAIN=pilot/medium EVAL=pilot/medium; fo
 
 publish: ## Assign stable person keys and fill the review queue (DATASET=pilot/medium)
 	uv run python -m patient_linkage.linkage.publish --dataset $(or $(DATASET),pilot/medium) --results data/processed/linkage/$(subst /,-,$(or $(DATASET),pilot/medium))__$(subst /,-,$(or $(DATASET),pilot/medium)).json $(if $(DAY),--through-day $(DAY))
+
+spark: ## Standardise with PySpark and compare with the warehouse (POP=pilot LEVEL=low; needs Java 17 or 21)
+	uv run python -m patient_linkage.spark.standardise --population $(or $(POP),pilot) --level $(or $(LEVEL),low) --compare
 
 airflow-up: ## Start Airflow on http://127.0.0.1:8080 (about 1 GB of memory)
 	docker compose --profile airflow up -d --build airflow

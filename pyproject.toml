@@ -21,6 +21,13 @@ dev = [
     "pytest-cov>=5.0",
     "ruff>=0.8",
 ]
+spark = [
+    "pyspark>=4.0,<5",
+]
+
+[tool.uv]
+# The Airflow image uses --no-default-groups, so it does not install Spark.
+default-groups = ["dev", "spark"]
 
 [build-system]
 requires = ["hatchling"]
