@@ -107,6 +107,9 @@ linkage_data:
 # stop a broken feed. A share is the fraction of a source's records affected.
 quality:
   min_records: 1
+  # A share can only stop a run if at least this many records are affected.
+  # Daily batches are small, so one bad value could otherwise look like 10%.
+  min_affected_records: 5
   missing_share:
     first_name: {warn: 0.01, fail: 0.05}
     surname: {warn: 0.01, fail: 0.05}

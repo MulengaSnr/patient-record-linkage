@@ -67,10 +67,15 @@ Rules are fixed here, before any results exist.
 | D7 | Full re-link is the default. Incremental linkage is added only if Splink 5's experimental `predict_between` proves reliable in testing | Avoids depending on an experimental feature | Incremental linkage from the start |
 | D8 | PySpark limited to one standardisation job in local mode, outside the nightly path | Gives real PySpark evidence without overloading the VM | Spark throughout; leaving it out (Spark is a known gap) |
 | D9 | Power BI built on the Windows host from exported mart files, with screenshots and the `.pbix` committed | Power BI Desktop is Windows-only | Superset or Streamlit (Power BI is what NHS adverts ask for) |
-| D10 | PostgreSQL 17, pinned by digest (added in step 3) | Airflow will share this server in step 6, and the older major version is the more cautious choice. Compatibility is confirmed in step 6 | PostgreSQL 18 |
+| D10 | PostgreSQL 17, pinned by digest (added in step 3) | Airflow will share this server in step 6, and the older major version is the more cautious choice. Confirmed working with Airflow 3.3.2 in step 6 | PostgreSQL 18 |
+| D11 | Airflow runs as one `standalone` container, capped at 3 GB (added in step 6) | Fits the VM with room for linkage. It is a development mode, so a real deployment would run the components separately | Separate scheduler, API and DAG-processor containers (more memory) |
+| D12 | The project has its own virtual environment inside the Airflow image (added in step 6) | Airflow's pinned packages and the project's differ, for example pandas 3.0.5 and 3.1.1. Tasks call the project's commands | Installing both together (version conflicts) |
+| D13 | One failed run pauses the DAG, and the loader refuses a day whose previous day is missing. `depends_on_past` is not used (added in step 6, **after testing**) | With `depends_on_past` and one run slot, the next day started, waited on the failed day and held the slot, so a cleared day could never run. Clearing later days did not help, because their tasks had no state to clear | `depends_on_past` (deadlocks recovery); more run slots (the waiting runs fill those too) |
+| D14 | The quality gate judges each batch separately, and a share can only fail with at least 5 affected records (added in step 6) | Across a whole dataset one bad day is diluted. Small daily batches also make single bad values look like large shares | Whole-dataset checks; raising every threshold |
+| D15 | A failed batch keeps its check results but none of its data (added in step 6) | Corrected files reuse record IDs, so rows from a failed load would block the correction for good | Upserting raw rows (raw would no longer be as received) |
 
 ## 7. Machine limits
-The VM has 4 cores and 7.3 GB of RAM. Airflow's memory use has **not been measured yet**, and step 6 measures it first. If it does not fit, the population shrinks before anything else changes. The record count is set in step 2 from measured generation and linkage times.
+The VM has 4 cores and 7.3 GB of RAM. Measured in step 6, Airflow uses about 1.0 GB idle and peaked at 1.4 GB while processing the pilot, leaving about 2 GB available, with no out-of-memory events. Memory at the full population size is still unmeasured. If it does not fit, the population shrinks before anything else changes. The record count is set in step 2 from measured generation and linkage times.
 
 ## 8. Cost
 **£0.** Everything runs locally and all the tools are open source. No cloud resources are created.

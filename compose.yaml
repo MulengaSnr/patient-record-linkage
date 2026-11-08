@@ -18,5 +18,38 @@ services:
       timeout: 3s
       retries: 12
 
+  # Started only with: docker compose --profile airflow up
+  airflow:
+    profiles: [airflow]
+    build:
+      context: .
+      dockerfile: docker/airflow/Dockerfile
+    image: patient-record-linkage-airflow:local
+    command: standalone
+    depends_on:
+      postgres:
+        condition: service_healthy
+    # Protects the 7.3 GB VM: Airflow is stopped before it can exhaust memory.
+    mem_limit: 3g
+    environment:
+      AIRFLOW__CORE__EXECUTOR: LocalExecutor
+      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://linkage:${POSTGRES_PASSWORD}@postgres:5432/airflow
+      AIRFLOW__CORE__LOAD_EXAMPLES: "False"
+      AIRFLOW__CORE__FERNET_KEY: ${AIRFLOW_FERNET_KEY:?Set AIRFLOW_FERNET_KEY in .env}
+      AIRFLOW__API_AUTH__JWT_SECRET: ${AIRFLOW_JWT_SECRET:?Set AIRFLOW_JWT_SECRET in .env}
+      # No login: the port below is reachable from this machine only.
+      AIRFLOW__CORE__SIMPLE_AUTH_MANAGER_ALL_ADMINS: "True"
+      AIRFLOW__CORE__PARALLELISM: "2"
+      AIRFLOW__API__WORKERS: "1"
+      WAREHOUSE_DSN: postgresql://linkage:${POSTGRES_PASSWORD}@postgres:5432/warehouse
+    ports:
+      - "127.0.0.1:8080:8080"
+    volumes:
+      - ./airflow/dags:/opt/airflow/dags:ro
+      # Only the source files and results. The truth table is never mounted.
+      - ./data/processed:/opt/linkage/data/processed:ro
+      - airflow_logs:/opt/airflow/logs
+
 volumes:
   pgdata:
+  airflow_logs:
