@@ -1,0 +1,1214 @@
+dataset,person_key,records,sources,source_combination,first_batch_day,distinct_nhs_numbers,conflicting_nhs_numbers
+pilot/medium-daily,P00000001,2,2,GP + Hospital,1,1,No
+pilot/medium-daily,P00000002,2,2,GP + Hospital,1,1,No
+pilot/medium-daily,P00000003,2,2,GP + Hospital,1,1,No
+pilot/medium-daily,P00000004,3,3,GP + Hospital + Lab,1,1,No
+pilot/medium-daily,P00000005,2,2,GP + Hospital,1,1,No
+pilot/medium-daily,P00000006,2,2,GP + Hospital,1,1,No
+pilot/medium-daily,P00000007,2,2,GP + Lab,1,1,No
+pilot/medium-daily,P00000008,2,2,GP + Hospital,1,1,No
+pilot/medium-daily,P00000009,2,2,GP + Hospital,1,1,No
+pilot/medium-daily,P00000010,3,3,GP + Hospital + Lab,1,1,No
+pilot/medium-daily,P00000011,1,1,GP,1,1,No
+pilot/medium-daily,P00000012,2,2,GP + Hospital,1,1,No
+pilot/medium-daily,P00000013,3,3,GP + Hospital + Lab,1,1,No
+pilot/medium-daily,P00000014,2,2,GP + Hospital,1,1,No
+pilot/medium-daily,P00000015,2,2,GP + Lab,1,1,No
+pilot/medium-daily,P00000016,1,1,GP,1,1,No
+pilot/medium-daily,P00000017,2,2,GP + Hospital,1,1,No
+pilot/medium-daily,P00000018,2,2,GP + Hospital,1,1,No
+pilot/medium-daily,P00000019,2,2,GP + Hospital,1,1,No
+pilot/medium-daily,P00000020,2,1,GP,1,1,No
+pilot/medium-daily,P00000021,2,2,GP + Lab,1,1,No
+pilot/medium-daily,P00000022,3,3,GP + Hospital + Lab,1,1,No
+pilot/medium-daily,P00000023,2,2,GP + Hospital,1,1,No
+pilot/medium-daily,P00000024,2,2,GP + Hospital,1,1,No
+pilot/medium-daily,P00000025,2,2,GP + Hospital,1,1,No
+pilot/medium-daily,P00000026,2,2,GP + Lab,1,1,No
+pilot/medium-daily,P00000027,4,3,GP + Hospital + Lab,1,1,No
+pilot/medium-daily,P00000028,4,3,GP + Hospital + Lab,1,1,No
+pilot/medium-daily,P00000029,3,3,GP + Hospital + Lab,1,1,No
+pilot/medium-daily,P00000030,2,2,GP + Lab,1,1,No
+pilot/medium-daily,P00000031,2,2,GP + Hospital,1,1,No
+pilot/medium-daily,P00000032,2,2,GP + Hospital,1,1,No
+pilot/medium-daily,P00000033,3,3,GP + Hospital + Lab,1,1,No
+pilot/medium-daily,P00000034,2,2,GP + Lab,1,1,No
+pilot/medium-daily,P00000035,1,1,GP,1,1,No
+pilot/medium-daily,P00000036,3,3,GP + Hospital + Lab,1,1,No
+pilot/medium-daily,P00000037,2,2,GP + Lab,1,1,No
+pilot/medium-daily,P00000038,1,1,GP,1,1,No
+pilot/medium-daily,P00000039,2,2,GP + Hospital,1,1,No
+pilot/medium-daily,P00000040,2,2,GP + Hospital,1,1,No
+pilot/medium-daily,P00000041,3,3,GP + Hospital + Lab,1,1,No
+pilot/medium-daily,P00000042,3,3,GP + Hospital + Lab,1,1,No
+pilot/medium-daily,P00000043,3,3,GP + Hospital + Lab,1,1,No
+pilot/medium-daily,P00000044,2,2,GP + Hospital,1,1,No
+pilot/medium-daily,P00000045,2,2,GP + Hospital,1,1,No
+pilot/medium-daily,P00000046,1,1,Hospital,1,1,No
+pilot/medium-daily,P00000047,3,3,GP + Hospital + Lab,1,1,No
+pilot/medium-daily,P00000048,3,3,GP + Hospital + Lab,1,1,No
+pilot/medium-daily,P00000049,2,2,GP + Hospital,1,1,No
+pilot/medium-daily,P00000050,4,3,GP + Hospital + Lab,1,1,No
+pilot/medium-daily,P00000051,2,2,GP + Hospital,1,1,No
+pilot/medium-daily,P00000052,2,2,Hospital + Lab,1,1,No
+pilot/medium-daily,P00000053,3,3,GP + Hospital + Lab,1,1,No
+pilot/medium-daily,P00000054,3,3,GP + Hospital + Lab,1,1,No
+pilot/medium-daily,P00000055,2,2,GP + Hospital,1,1,No
+pilot/medium-daily,P00000056,2,2,GP + Hospital,1,1,No
+pilot/medium-daily,P00000057,4,3,GP + Hospital + Lab,1,1,No
+pilot/medium-daily,P00000058,2,2,GP + Hospital,1,1,No
+pilot/medium-daily,P00000059,3,3,GP + Hospital + Lab,1,1,No
+pilot/medium-daily,P00000060,2,2,GP + Hospital,1,1,No
+pilot/medium-daily,P00000061,2,2,GP + Hospital,1,1,No
+pilot/medium-daily,P00000062,2,2,GP + Hospital,1,1,No
+pilot/medium-daily,P00000063,3,3,GP + Hospital + Lab,1,1,No
+pilot/medium-daily,P00000064,2,2,GP + Lab,1,1,No
+pilot/medium-daily,P00000065,2,2,GP + Lab,1,1,No
+pilot/medium-daily,P00000066,3,3,GP + Hospital + Lab,1,1,No
+pilot/medium-daily,P00000067,3,2,GP + Lab,1,1,No
+pilot/medium-daily,P00000068,3,3,GP + Hospital + Lab,1,1,No
+pilot/medium-daily,P00000069,2,2,GP + Lab,1,1,No
+pilot/medium-daily,P00000070,3,3,GP + Hospital + Lab,1,1,No
+pilot/medium-daily,P00000071,3,3,GP + Hospital + Lab,1,1,No
+pilot/medium-daily,P00000072,4,3,GP + Hospital + Lab,1,1,No
+pilot/medium-daily,P00000073,1,1,Lab,1,0,No
+pilot/medium-daily,P00000074,3,3,GP + Hospital + Lab,1,1,No
+pilot/medium-daily,P00000075,3,3,GP + Hospital + Lab,1,1,No
+pilot/medium-daily,P00000076,4,3,GP + Hospital + Lab,1,1,No
+pilot/medium-daily,P00000077,4,3,GP + Hospital + Lab,1,1,No
+pilot/medium-daily,P00000078,1,1,Lab,1,0,No
+pilot/medium-daily,P00000079,3,3,GP + Hospital + Lab,1,1,No
+pilot/medium-daily,P00000080,3,3,GP + Hospital + Lab,1,1,No
+pilot/medium-daily,P00000081,4,3,GP + Hospital + Lab,1,1,No
+pilot/medium-daily,P00000082,1,1,Lab,1,0,No
+pilot/medium-daily,P00000083,3,3,GP + Hospital + Lab,1,1,No
+pilot/medium-daily,P00000084,2,2,GP + Hospital,2,1,No
+pilot/medium-daily,P00000085,2,2,GP + Hospital,2,1,No
+pilot/medium-daily,P00000086,2,2,GP + Hospital,2,1,No
+pilot/medium-daily,P00000087,3,3,GP + Hospital + Lab,2,1,No
+pilot/medium-daily,P00000088,2,2,GP + Hospital,2,1,No
+pilot/medium-daily,P00000089,2,2,GP + Hospital,2,1,No
+pilot/medium-daily,P00000090,1,1,GP,2,1,No
+pilot/medium-daily,P00000091,2,2,GP + Hospital,2,1,No
+pilot/medium-daily,P00000092,1,1,GP,2,1,No
+pilot/medium-daily,P00000093,1,1,GP,2,1,No
+pilot/medium-daily,P00000094,1,1,GP,2,0,No
+pilot/medium-daily,P00000095,3,3,GP + Hospital + Lab,2,1,No
+pilot/medium-daily,P00000096,2,2,GP + Lab,2,1,No
+pilot/medium-daily,P00000097,3,3,GP + Hospital + Lab,2,1,No
+pilot/medium-daily,P00000098,3,2,GP + Hospital,2,1,No
+pilot/medium-daily,P00000099,1,1,GP,2,1,No
+pilot/medium-daily,P00000100,1,1,GP,2,1,No
+pilot/medium-daily,P00000101,1,1,GP,2,1,No
+pilot/medium-daily,P00000102,2,2,GP + Lab,2,1,No
+pilot/medium-daily,P00000103,2,2,GP + Lab,2,1,No
+pilot/medium-daily,P00000104,1,1,GP,2,1,No
+pilot/medium-daily,P00000105,3,2,GP + Lab,2,1,No
+pilot/medium-daily,P00000106,3,3,GP + Hospital + Lab,2,1,No
+pilot/medium-daily,P00000107,2,2,GP + Lab,2,1,No
+pilot/medium-daily,P00000108,2,2,GP + Lab,2,1,No
+pilot/medium-daily,P00000109,4,3,GP + Hospital + Lab,2,1,No
+pilot/medium-daily,P00000110,3,3,GP + Hospital + Lab,2,1,No
+pilot/medium-daily,P00000111,1,1,GP,2,1,No
+pilot/medium-daily,P00000112,2,2,GP + Hospital,2,1,No
+pilot/medium-daily,P00000113,2,2,GP + Lab,2,1,No
+pilot/medium-daily,P00000114,2,2,GP + Lab,2,1,No
+pilot/medium-daily,P00000115,1,1,GP,2,1,No
+pilot/medium-daily,P00000116,1,1,GP,2,1,No
+pilot/medium-daily,P00000117,2,2,GP + Hospital,2,1,No
+pilot/medium-daily,P00000118,3,3,GP + Hospital + Lab,2,1,No
+pilot/medium-daily,P00000119,5,3,GP + Hospital + Lab,2,1,No
+pilot/medium-daily,P00000120,1,1,GP,2,1,No
+pilot/medium-daily,P00000121,2,2,GP + Hospital,2,1,No
+pilot/medium-daily,P00000122,1,1,Hospital,2,1,No
+pilot/medium-daily,P00000123,1,1,Hospital,2,1,No
+pilot/medium-daily,P00000124,2,2,GP + Hospital,2,1,No
+pilot/medium-daily,P00000125,3,3,GP + Hospital + Lab,2,1,No
+pilot/medium-daily,P00000126,2,2,GP + Hospital,2,1,No
+pilot/medium-daily,P00000127,3,3,GP + Hospital + Lab,2,1,No
+pilot/medium-daily,P00000128,2,2,GP + Hospital,2,1,No
+pilot/medium-daily,P00000129,2,2,GP + Hospital,2,1,No
+pilot/medium-daily,P00000130,3,3,GP + Hospital + Lab,2,1,No
+pilot/medium-daily,P00000131,2,2,GP + Hospital,2,1,No
+pilot/medium-daily,P00000132,2,2,GP + Hospital,2,1,No
+pilot/medium-daily,P00000133,3,3,GP + Hospital + Lab,2,1,No
+pilot/medium-daily,P00000134,3,2,GP + Hospital,2,1,No
+pilot/medium-daily,P00000135,2,2,GP + Hospital,2,1,No
+pilot/medium-daily,P00000136,1,1,Hospital,2,0,No
+pilot/medium-daily,P00000137,3,3,GP + Hospital + Lab,2,1,No
+pilot/medium-daily,P00000138,3,3,GP + Hospital + Lab,2,1,No
+pilot/medium-daily,P00000139,2,2,Hospital + Lab,2,0,No
+pilot/medium-daily,P00000140,3,3,GP + Hospital + Lab,2,1,No
+pilot/medium-daily,P00000141,2,2,GP + Hospital,2,1,No
+pilot/medium-daily,P00000142,2,2,Hospital + Lab,2,0,No
+pilot/medium-daily,P00000143,2,2,GP + Hospital,2,1,No
+pilot/medium-daily,P00000144,2,2,GP + Hospital,2,1,No
+pilot/medium-daily,P00000145,3,3,GP + Hospital + Lab,2,1,No
+pilot/medium-daily,P00000146,3,3,GP + Hospital + Lab,2,1,No
+pilot/medium-daily,P00000147,3,2,GP + Hospital,2,1,No
+pilot/medium-daily,P00000148,3,3,GP + Hospital + Lab,2,1,No
+pilot/medium-daily,P00000149,3,3,GP + Hospital + Lab,2,1,No
+pilot/medium-daily,P00000150,2,2,Hospital + Lab,2,1,No
+pilot/medium-daily,P00000152,3,3,GP + Hospital + Lab,2,1,No
+pilot/medium-daily,P00000153,2,2,GP + Lab,2,1,No
+pilot/medium-daily,P00000154,2,2,GP + Lab,2,1,No
+pilot/medium-daily,P00000155,2,2,GP + Lab,2,1,No
+pilot/medium-daily,P00000156,4,3,GP + Hospital + Lab,2,1,No
+pilot/medium-daily,P00000157,2,2,Hospital + Lab,2,1,No
+pilot/medium-daily,P00000158,3,3,GP + Hospital + Lab,2,1,No
+pilot/medium-daily,P00000159,4,3,GP + Hospital + Lab,2,1,No
+pilot/medium-daily,P00000160,1,1,Lab,2,0,No
+pilot/medium-daily,P00000161,2,2,GP + Lab,2,1,No
+pilot/medium-daily,P00000162,4,3,GP + Hospital + Lab,3,1,No
+pilot/medium-daily,P00000163,3,2,GP + Hospital,3,1,No
+pilot/medium-daily,P00000164,2,2,GP + Hospital,3,1,No
+pilot/medium-daily,P00000165,2,2,GP + Hospital,3,1,No
+pilot/medium-daily,P00000166,3,3,GP + Hospital + Lab,3,1,No
+pilot/medium-daily,P00000167,1,1,GP,3,1,No
+pilot/medium-daily,P00000168,1,1,GP,3,1,No
+pilot/medium-daily,P00000169,1,1,GP,3,1,No
+pilot/medium-daily,P00000170,2,2,GP + Hospital,3,1,No
+pilot/medium-daily,P00000171,3,3,GP + Hospital + Lab,3,1,No
+pilot/medium-daily,P00000172,1,1,GP,3,1,No
+pilot/medium-daily,P00000173,2,2,GP + Hospital,3,1,No
+pilot/medium-daily,P00000174,2,2,GP + Hospital,3,1,No
+pilot/medium-daily,P00000175,3,3,GP + Hospital + Lab,3,1,No
+pilot/medium-daily,P00000176,4,3,GP + Hospital + Lab,3,1,No
+pilot/medium-daily,P00000177,3,3,GP + Hospital + Lab,3,1,No
+pilot/medium-daily,P00000178,2,1,GP,3,1,No
+pilot/medium-daily,P00000179,1,1,GP,3,1,No
+pilot/medium-daily,P00000180,3,2,GP + Lab,3,1,No
+pilot/medium-daily,P00000181,2,2,GP + Lab,3,1,No
+pilot/medium-daily,P00000182,2,2,GP + Lab,3,1,No
+pilot/medium-daily,P00000183,3,3,GP + Hospital + Lab,3,1,No
+pilot/medium-daily,P00000184,1,1,GP,3,1,No
+pilot/medium-daily,P00000185,2,2,GP + Hospital,3,1,No
+pilot/medium-daily,P00000186,2,1,Hospital,3,1,No
+pilot/medium-daily,P00000187,3,3,GP + Hospital + Lab,3,1,No
+pilot/medium-daily,P00000188,2,2,GP + Hospital,3,1,No
+pilot/medium-daily,P00000189,2,2,GP + Hospital,3,1,No
+pilot/medium-daily,P00000190,3,2,GP + Hospital,3,1,No
+pilot/medium-daily,P00000191,2,2,Hospital + Lab,3,1,No
+pilot/medium-daily,P00000192,2,2,GP + Hospital,3,1,No
+pilot/medium-daily,P00000193,3,2,GP + Hospital,3,1,No
+pilot/medium-daily,P00000194,4,3,GP + Hospital + Lab,3,1,No
+pilot/medium-daily,P00000195,1,1,Hospital,3,0,No
+pilot/medium-daily,P00000196,3,3,GP + Hospital + Lab,3,1,No
+pilot/medium-daily,P00000197,3,3,GP + Hospital + Lab,3,1,No
+pilot/medium-daily,P00000198,2,2,GP + Hospital,3,1,No
+pilot/medium-daily,P00000199,4,3,GP + Hospital + Lab,3,1,No
+pilot/medium-daily,P00000200,2,2,GP + Hospital,3,1,No
+pilot/medium-daily,P00000201,2,2,Hospital + Lab,3,0,No
+pilot/medium-daily,P00000202,2,2,GP + Hospital,3,1,No
+pilot/medium-daily,P00000203,3,3,GP + Hospital + Lab,3,1,No
+pilot/medium-daily,P00000204,1,1,Hospital,3,1,No
+pilot/medium-daily,P00000205,2,2,GP + Hospital,3,1,No
+pilot/medium-daily,P00000206,2,2,GP + Hospital,3,1,No
+pilot/medium-daily,P00000207,2,2,GP + Hospital,3,1,No
+pilot/medium-daily,P00000208,3,3,GP + Hospital + Lab,3,1,No
+pilot/medium-daily,P00000209,2,2,Hospital + Lab,3,1,No
+pilot/medium-daily,P00000211,3,3,GP + Hospital + Lab,3,1,No
+pilot/medium-daily,P00000212,4,3,GP + Hospital + Lab,3,1,No
+pilot/medium-daily,P00000213,3,3,GP + Hospital + Lab,3,1,No
+pilot/medium-daily,P00000214,3,3,GP + Hospital + Lab,3,1,No
+pilot/medium-daily,P00000215,2,2,GP + Lab,3,1,No
+pilot/medium-daily,P00000216,1,1,Lab,3,0,No
+pilot/medium-daily,P00000217,3,3,GP + Hospital + Lab,3,1,No
+pilot/medium-daily,P00000218,1,1,Lab,3,0,No
+pilot/medium-daily,P00000219,1,1,Lab,3,0,No
+pilot/medium-daily,P00000220,3,3,GP + Hospital + Lab,3,1,No
+pilot/medium-daily,P00000222,3,3,GP + Hospital + Lab,3,1,No
+pilot/medium-daily,P00000223,3,3,GP + Hospital + Lab,3,1,No
+pilot/medium-daily,P00000224,2,2,GP + Lab,3,1,No
+pilot/medium-daily,P00000225,3,3,GP + Hospital + Lab,3,1,No
+pilot/medium-daily,P00000227,2,2,GP + Lab,3,1,No
+pilot/medium-daily,P00000228,3,3,GP + Hospital + Lab,4,1,No
+pilot/medium-daily,P00000229,2,2,GP + Hospital,4,1,No
+pilot/medium-daily,P00000230,2,2,GP + Hospital,4,1,No
+pilot/medium-daily,P00000231,3,3,GP + Hospital + Lab,4,1,No
+pilot/medium-daily,P00000232,2,2,GP + Hospital,4,1,No
+pilot/medium-daily,P00000233,3,3,GP + Hospital + Lab,4,1,No
+pilot/medium-daily,P00000234,2,2,GP + Lab,4,1,No
+pilot/medium-daily,P00000235,1,1,GP,4,1,No
+pilot/medium-daily,P00000236,3,3,GP + Hospital + Lab,4,1,No
+pilot/medium-daily,P00000237,3,3,GP + Hospital + Lab,4,1,No
+pilot/medium-daily,P00000238,3,3,GP + Hospital + Lab,4,1,No
+pilot/medium-daily,P00000239,2,2,GP + Hospital,4,1,No
+pilot/medium-daily,P00000240,1,1,GP,4,1,No
+pilot/medium-daily,P00000241,3,3,GP + Hospital + Lab,4,1,No
+pilot/medium-daily,P00000242,1,1,GP,4,1,No
+pilot/medium-daily,P00000243,3,3,GP + Hospital + Lab,4,2,Yes
+pilot/medium-daily,P00000244,1,1,GP,4,1,No
+pilot/medium-daily,P00000245,2,2,GP + Lab,4,1,No
+pilot/medium-daily,P00000246,3,3,GP + Hospital + Lab,4,1,No
+pilot/medium-daily,P00000247,1,1,GP,4,1,No
+pilot/medium-daily,P00000248,2,2,GP + Hospital,4,1,No
+pilot/medium-daily,P00000249,1,1,GP,4,1,No
+pilot/medium-daily,P00000250,1,1,GP,4,1,No
+pilot/medium-daily,P00000251,3,3,GP + Hospital + Lab,4,1,No
+pilot/medium-daily,P00000252,2,2,GP + Hospital,4,1,No
+pilot/medium-daily,P00000253,3,3,GP + Hospital + Lab,4,1,No
+pilot/medium-daily,P00000254,2,2,Hospital + Lab,4,1,No
+pilot/medium-daily,P00000255,2,2,GP + Hospital,4,1,No
+pilot/medium-daily,P00000256,3,3,GP + Hospital + Lab,4,1,No
+pilot/medium-daily,P00000257,1,1,Hospital,4,0,No
+pilot/medium-daily,P00000258,3,3,GP + Hospital + Lab,4,1,No
+pilot/medium-daily,P00000259,3,3,GP + Hospital + Lab,4,1,No
+pilot/medium-daily,P00000260,2,2,GP + Hospital,4,1,No
+pilot/medium-daily,P00000261,2,2,Hospital + Lab,4,1,No
+pilot/medium-daily,P00000262,1,1,Hospital,4,0,No
+pilot/medium-daily,P00000263,3,3,GP + Hospital + Lab,4,1,No
+pilot/medium-daily,P00000264,3,3,GP + Hospital + Lab,4,1,No
+pilot/medium-daily,P00000265,1,1,Hospital,4,1,No
+pilot/medium-daily,P00000266,2,2,GP + Hospital,4,1,No
+pilot/medium-daily,P00000267,3,3,GP + Hospital + Lab,4,1,No
+pilot/medium-daily,P00000268,3,3,GP + Hospital + Lab,4,1,No
+pilot/medium-daily,P00000269,3,3,GP + Hospital + Lab,4,1,No
+pilot/medium-daily,P00000270,2,2,GP + Hospital,4,1,No
+pilot/medium-daily,P00000271,1,1,Hospital,4,0,No
+pilot/medium-daily,P00000272,4,3,GP + Hospital + Lab,4,1,No
+pilot/medium-daily,P00000273,2,2,GP + Hospital,4,1,No
+pilot/medium-daily,P00000274,3,3,GP + Hospital + Lab,4,1,No
+pilot/medium-daily,P00000275,2,2,Hospital + Lab,4,1,No
+pilot/medium-daily,P00000276,2,2,GP + Lab,4,1,No
+pilot/medium-daily,P00000277,3,3,GP + Hospital + Lab,4,1,No
+pilot/medium-daily,P00000278,3,3,GP + Hospital + Lab,4,1,No
+pilot/medium-daily,P00000279,2,2,GP + Lab,4,1,No
+pilot/medium-daily,P00000280,2,2,GP + Lab,4,1,No
+pilot/medium-daily,P00000281,2,2,GP + Lab,4,1,No
+pilot/medium-daily,P00000282,3,3,GP + Hospital + Lab,4,1,No
+pilot/medium-daily,P00000283,3,3,GP + Hospital + Lab,4,1,No
+pilot/medium-daily,P00000284,1,1,Lab,4,0,No
+pilot/medium-daily,P00000285,3,3,GP + Hospital + Lab,4,1,No
+pilot/medium-daily,P00000286,1,1,Lab,4,1,No
+pilot/medium-daily,P00000287,3,3,GP + Hospital + Lab,4,1,No
+pilot/medium-daily,P00000288,2,2,GP + Lab,4,1,No
+pilot/medium-daily,P00000289,3,3,GP + Hospital + Lab,4,1,No
+pilot/medium-daily,P00000290,3,3,GP + Hospital + Lab,4,1,No
+pilot/medium-daily,P00000291,1,1,GP,5,1,No
+pilot/medium-daily,P00000292,1,1,GP,5,1,No
+pilot/medium-daily,P00000293,4,3,GP + Hospital + Lab,5,1,No
+pilot/medium-daily,P00000294,3,3,GP + Hospital + Lab,5,1,No
+pilot/medium-daily,P00000295,2,2,GP + Lab,5,1,No
+pilot/medium-daily,P00000296,2,2,GP + Hospital,5,1,No
+pilot/medium-daily,P00000297,2,2,GP + Hospital,5,1,No
+pilot/medium-daily,P00000298,2,2,GP + Hospital,5,1,No
+pilot/medium-daily,P00000299,2,2,GP + Lab,5,1,No
+pilot/medium-daily,P00000300,2,2,GP + Hospital,5,1,No
+pilot/medium-daily,P00000301,3,3,GP + Hospital + Lab,5,1,No
+pilot/medium-daily,P00000302,3,3,GP + Hospital + Lab,5,1,No
+pilot/medium-daily,P00000303,3,3,GP + Hospital + Lab,5,1,No
+pilot/medium-daily,P00000304,2,2,GP + Hospital,5,1,No
+pilot/medium-daily,P00000305,3,3,GP + Hospital + Lab,5,1,No
+pilot/medium-daily,P00000306,2,2,GP + Hospital,5,1,No
+pilot/medium-daily,P00000307,1,1,GP,5,1,No
+pilot/medium-daily,P00000308,2,2,GP + Hospital,5,1,No
+pilot/medium-daily,P00000309,2,2,GP + Lab,5,1,No
+pilot/medium-daily,P00000310,3,3,GP + Hospital + Lab,5,1,No
+pilot/medium-daily,P00000311,2,2,GP + Hospital,5,1,No
+pilot/medium-daily,P00000312,3,3,GP + Hospital + Lab,5,1,No
+pilot/medium-daily,P00000313,2,2,GP + Lab,5,1,No
+pilot/medium-daily,P00000314,4,3,GP + Hospital + Lab,5,1,No
+pilot/medium-daily,P00000315,3,3,GP + Hospital + Lab,5,1,No
+pilot/medium-daily,P00000316,2,2,GP + Lab,5,1,No
+pilot/medium-daily,P00000317,2,2,GP + Hospital,5,1,No
+pilot/medium-daily,P00000318,2,2,GP + Hospital,5,1,No
+pilot/medium-daily,P00000319,2,2,GP + Lab,5,1,No
+pilot/medium-daily,P00000320,3,3,GP + Hospital + Lab,5,1,No
+pilot/medium-daily,P00000321,2,2,GP + Hospital,5,1,No
+pilot/medium-daily,P00000322,3,3,GP + Hospital + Lab,5,1,No
+pilot/medium-daily,P00000323,3,3,GP + Hospital + Lab,5,1,No
+pilot/medium-daily,P00000324,2,2,GP + Hospital,5,1,No
+pilot/medium-daily,P00000325,2,2,GP + Hospital,5,0,No
+pilot/medium-daily,P00000326,3,3,GP + Hospital + Lab,5,1,No
+pilot/medium-daily,P00000327,1,1,Hospital,5,1,No
+pilot/medium-daily,P00000328,2,2,GP + Hospital,5,1,No
+pilot/medium-daily,P00000329,3,3,GP + Hospital + Lab,5,1,No
+pilot/medium-daily,P00000330,2,2,GP + Hospital,5,1,No
+pilot/medium-daily,P00000331,2,2,Hospital + Lab,5,0,No
+pilot/medium-daily,P00000332,2,2,GP + Hospital,5,1,No
+pilot/medium-daily,P00000333,3,3,GP + Hospital + Lab,5,1,No
+pilot/medium-daily,P00000334,3,3,GP + Hospital + Lab,5,1,No
+pilot/medium-daily,P00000335,3,3,GP + Hospital + Lab,5,1,No
+pilot/medium-daily,P00000336,1,1,Hospital,5,1,No
+pilot/medium-daily,P00000337,2,2,GP + Hospital,5,1,No
+pilot/medium-daily,P00000338,1,1,Hospital,5,0,No
+pilot/medium-daily,P00000339,3,3,GP + Hospital + Lab,5,1,No
+pilot/medium-daily,P00000340,3,3,GP + Hospital + Lab,5,1,No
+pilot/medium-daily,P00000341,2,2,GP + Hospital,5,1,No
+pilot/medium-daily,P00000342,3,3,GP + Hospital + Lab,5,1,No
+pilot/medium-daily,P00000344,2,2,GP + Hospital,5,1,No
+pilot/medium-daily,P00000345,2,2,GP + Hospital,5,1,No
+pilot/medium-daily,P00000346,3,3,GP + Hospital + Lab,5,1,No
+pilot/medium-daily,P00000347,3,2,GP + Hospital,5,1,No
+pilot/medium-daily,P00000348,3,3,GP + Hospital + Lab,5,1,No
+pilot/medium-daily,P00000349,2,2,GP + Hospital,5,1,No
+pilot/medium-daily,P00000350,1,1,Hospital,5,1,No
+pilot/medium-daily,P00000351,1,1,Hospital,5,1,No
+pilot/medium-daily,P00000352,3,3,GP + Hospital + Lab,5,1,No
+pilot/medium-daily,P00000353,3,3,GP + Hospital + Lab,5,1,No
+pilot/medium-daily,P00000354,3,3,GP + Hospital + Lab,5,1,No
+pilot/medium-daily,P00000355,3,2,GP + Lab,5,1,No
+pilot/medium-daily,P00000356,2,2,GP + Lab,5,1,No
+pilot/medium-daily,P00000358,3,3,GP + Hospital + Lab,5,1,No
+pilot/medium-daily,P00000360,1,1,Lab,5,0,No
+pilot/medium-daily,P00000361,2,2,Hospital + Lab,5,1,No
+pilot/medium-daily,P00000362,3,3,GP + Hospital + Lab,5,1,No
+pilot/medium-daily,P00000363,1,1,Lab,5,1,No
+pilot/medium-daily,P00000364,1,1,Lab,5,0,No
+pilot/medium-daily,P00000365,2,2,GP + Hospital,6,1,No
+pilot/medium-daily,P00000366,2,2,GP + Hospital,6,1,No
+pilot/medium-daily,P00000367,1,1,GP,6,0,No
+pilot/medium-daily,P00000368,2,2,GP + Lab,6,1,No
+pilot/medium-daily,P00000369,3,3,GP + Hospital + Lab,6,1,No
+pilot/medium-daily,P00000370,3,3,GP + Hospital + Lab,6,1,No
+pilot/medium-daily,P00000371,3,3,GP + Hospital + Lab,6,1,No
+pilot/medium-daily,P00000372,3,3,GP + Hospital + Lab,6,1,No
+pilot/medium-daily,P00000373,3,3,GP + Hospital + Lab,6,1,No
+pilot/medium-daily,P00000374,3,3,GP + Hospital + Lab,6,1,No
+pilot/medium-daily,P00000375,1,1,GP,6,1,No
+pilot/medium-daily,P00000376,3,2,GP + Hospital,6,1,No
+pilot/medium-daily,P00000377,2,2,GP + Hospital,6,1,No
+pilot/medium-daily,P00000378,2,2,GP + Hospital,6,1,No
+pilot/medium-daily,P00000379,2,1,GP,6,1,No
+pilot/medium-daily,P00000380,1,1,GP,6,1,No
+pilot/medium-daily,P00000381,3,3,GP + Hospital + Lab,6,1,No
+pilot/medium-daily,P00000382,2,2,GP + Hospital,6,1,No
+pilot/medium-daily,P00000383,1,1,GP,6,1,No
+pilot/medium-daily,P00000384,2,2,GP + Lab,6,1,No
+pilot/medium-daily,P00000385,3,3,GP + Hospital + Lab,6,1,No
+pilot/medium-daily,P00000386,1,1,GP,6,1,No
+pilot/medium-daily,P00000387,3,3,GP + Hospital + Lab,6,1,No
+pilot/medium-daily,P00000389,1,1,GP,6,1,No
+pilot/medium-daily,P00000390,2,2,GP + Lab,6,1,No
+pilot/medium-daily,P00000391,1,1,GP,6,1,No
+pilot/medium-daily,P00000392,3,3,GP + Hospital + Lab,6,1,No
+pilot/medium-daily,P00000393,2,2,GP + Lab,6,1,No
+pilot/medium-daily,P00000394,3,3,GP + Hospital + Lab,6,1,No
+pilot/medium-daily,P00000395,2,2,GP + Hospital,6,1,No
+pilot/medium-daily,P00000396,2,2,Hospital + Lab,6,0,No
+pilot/medium-daily,P00000397,2,2,GP + Hospital,6,1,No
+pilot/medium-daily,P00000398,1,1,Hospital,6,0,No
+pilot/medium-daily,P00000399,3,2,GP + Hospital,6,1,No
+pilot/medium-daily,P00000400,2,2,GP + Hospital,6,1,No
+pilot/medium-daily,P00000401,1,1,Hospital,6,1,No
+pilot/medium-daily,P00000402,4,3,GP + Hospital + Lab,6,1,No
+pilot/medium-daily,P00000403,2,2,GP + Hospital,6,1,No
+pilot/medium-daily,P00000404,2,2,GP + Hospital,6,1,No
+pilot/medium-daily,P00000405,3,3,GP + Hospital + Lab,6,1,No
+pilot/medium-daily,P00000406,2,2,Hospital + Lab,6,0,No
+pilot/medium-daily,P00000407,3,3,GP + Hospital + Lab,6,1,No
+pilot/medium-daily,P00000408,2,2,GP + Hospital,6,1,No
+pilot/medium-daily,P00000409,2,2,GP + Hospital,6,1,No
+pilot/medium-daily,P00000410,1,1,Hospital,6,0,No
+pilot/medium-daily,P00000411,2,2,GP + Hospital,6,1,No
+pilot/medium-daily,P00000412,4,3,GP + Hospital + Lab,6,1,No
+pilot/medium-daily,P00000413,3,3,GP + Hospital + Lab,6,1,No
+pilot/medium-daily,P00000414,2,2,GP + Hospital,6,1,No
+pilot/medium-daily,P00000415,2,2,GP + Hospital,6,1,No
+pilot/medium-daily,P00000416,2,2,Hospital + Lab,6,1,No
+pilot/medium-daily,P00000417,3,3,GP + Hospital + Lab,6,1,No
+pilot/medium-daily,P00000418,3,3,GP + Hospital + Lab,6,1,No
+pilot/medium-daily,P00000419,3,3,GP + Hospital + Lab,6,1,No
+pilot/medium-daily,P00000420,3,3,GP + Hospital + Lab,6,1,No
+pilot/medium-daily,P00000421,3,3,GP + Hospital + Lab,6,1,No
+pilot/medium-daily,P00000422,4,3,GP + Hospital + Lab,6,1,No
+pilot/medium-daily,P00000423,3,3,GP + Hospital + Lab,6,1,No
+pilot/medium-daily,P00000424,4,3,GP + Hospital + Lab,6,1,No
+pilot/medium-daily,P00000425,2,2,GP + Lab,6,1,No
+pilot/medium-daily,P00000426,3,3,GP + Hospital + Lab,6,1,No
+pilot/medium-daily,P00000427,3,3,GP + Hospital + Lab,6,1,No
+pilot/medium-daily,P00000428,3,2,GP + Lab,6,1,No
+pilot/medium-daily,P00000429,2,2,GP + Hospital,7,1,No
+pilot/medium-daily,P00000430,1,1,GP,7,1,No
+pilot/medium-daily,P00000431,2,2,GP + Lab,7,1,No
+pilot/medium-daily,P00000432,3,3,GP + Hospital + Lab,7,1,No
+pilot/medium-daily,P00000433,3,3,GP + Hospital + Lab,7,1,No
+pilot/medium-daily,P00000434,1,1,GP,7,1,No
+pilot/medium-daily,P00000435,2,2,GP + Lab,7,1,No
+pilot/medium-daily,P00000436,1,1,GP,7,1,No
+pilot/medium-daily,P00000437,2,2,GP + Hospital,7,1,No
+pilot/medium-daily,P00000438,3,3,GP + Hospital + Lab,7,1,No
+pilot/medium-daily,P00000439,4,3,GP + Hospital + Lab,7,1,No
+pilot/medium-daily,P00000440,2,2,GP + Lab,7,1,No
+pilot/medium-daily,P00000441,1,1,GP,7,1,No
+pilot/medium-daily,P00000442,3,3,GP + Hospital + Lab,7,1,No
+pilot/medium-daily,P00000443,1,1,GP,7,1,No
+pilot/medium-daily,P00000444,2,2,GP + Hospital,7,1,No
+pilot/medium-daily,P00000445,2,2,GP + Lab,7,1,No
+pilot/medium-daily,P00000446,3,3,GP + Hospital + Lab,7,1,No
+pilot/medium-daily,P00000447,1,1,GP,7,1,No
+pilot/medium-daily,P00000448,3,3,GP + Hospital + Lab,7,1,No
+pilot/medium-daily,P00000449,2,2,GP + Lab,7,1,No
+pilot/medium-daily,P00000450,3,2,GP + Hospital,7,1,No
+pilot/medium-daily,P00000451,2,2,GP + Lab,7,1,No
+pilot/medium-daily,P00000452,2,2,GP + Hospital,7,1,No
+pilot/medium-daily,P00000453,1,1,GP,7,1,No
+pilot/medium-daily,P00000454,2,2,GP + Hospital,7,1,No
+pilot/medium-daily,P00000455,3,3,GP + Hospital + Lab,7,1,No
+pilot/medium-daily,P00000456,2,2,GP + Hospital,7,1,No
+pilot/medium-daily,P00000457,2,2,GP + Hospital,7,1,No
+pilot/medium-daily,P00000458,2,2,GP + Lab,7,1,No
+pilot/medium-daily,P00000459,2,2,GP + Hospital,7,1,No
+pilot/medium-daily,P00000460,2,2,GP + Hospital,7,1,No
+pilot/medium-daily,P00000461,3,3,GP + Hospital + Lab,7,1,No
+pilot/medium-daily,P00000462,2,2,GP + Hospital,7,1,No
+pilot/medium-daily,P00000463,3,3,GP + Hospital + Lab,7,1,No
+pilot/medium-daily,P00000464,2,2,Hospital + Lab,7,1,No
+pilot/medium-daily,P00000465,2,2,GP + Hospital,7,1,No
+pilot/medium-daily,P00000466,1,1,Hospital,7,0,No
+pilot/medium-daily,P00000467,3,2,GP + Hospital,7,1,No
+pilot/medium-daily,P00000468,2,2,GP + Hospital,7,1,No
+pilot/medium-daily,P00000469,3,3,GP + Hospital + Lab,7,1,No
+pilot/medium-daily,P00000470,2,2,GP + Hospital,7,1,No
+pilot/medium-daily,P00000471,3,3,GP + Hospital + Lab,7,1,No
+pilot/medium-daily,P00000472,3,2,GP + Hospital,7,1,No
+pilot/medium-daily,P00000473,1,1,Hospital,7,0,No
+pilot/medium-daily,P00000474,2,2,GP + Hospital,7,0,No
+pilot/medium-daily,P00000475,3,2,GP + Hospital,7,1,No
+pilot/medium-daily,P00000476,3,3,GP + Hospital + Lab,7,1,No
+pilot/medium-daily,P00000478,2,2,GP + Hospital,7,1,No
+pilot/medium-daily,P00000479,2,2,GP + Hospital,7,1,No
+pilot/medium-daily,P00000480,3,3,GP + Hospital + Lab,7,1,No
+pilot/medium-daily,P00000481,3,3,GP + Hospital + Lab,7,1,No
+pilot/medium-daily,P00000482,2,2,GP + Hospital,7,1,No
+pilot/medium-daily,P00000483,2,2,GP + Hospital,7,1,No
+pilot/medium-daily,P00000484,2,2,Hospital + Lab,7,1,No
+pilot/medium-daily,P00000485,2,2,GP + Hospital,7,1,No
+pilot/medium-daily,P00000486,3,3,GP + Hospital + Lab,7,1,No
+pilot/medium-daily,P00000487,3,3,GP + Hospital + Lab,7,1,No
+pilot/medium-daily,P00000488,2,2,Hospital + Lab,7,1,No
+pilot/medium-daily,P00000489,3,3,GP + Hospital + Lab,7,1,No
+pilot/medium-daily,P00000490,3,3,GP + Hospital + Lab,7,1,No
+pilot/medium-daily,P00000491,3,3,GP + Hospital + Lab,7,1,No
+pilot/medium-daily,P00000492,2,2,GP + Lab,7,1,No
+pilot/medium-daily,P00000493,1,1,Lab,7,0,No
+pilot/medium-daily,P00000494,1,1,Lab,7,0,No
+pilot/medium-daily,P00000495,3,3,GP + Hospital + Lab,7,1,No
+pilot/medium-daily,P00000496,2,2,GP + Lab,7,1,No
+pilot/medium-daily,P00000497,4,3,GP + Hospital + Lab,7,1,No
+pilot/medium-daily,P00000498,3,3,GP + Hospital + Lab,7,1,No
+pilot/medium-daily,P00000499,3,3,GP + Hospital + Lab,7,1,No
+pilot/medium-daily,P00000500,1,1,Lab,7,0,No
+pilot/medium-daily,P00000501,2,2,Hospital + Lab,7,1,No
+pilot/medium-daily,P00000502,4,3,GP + Hospital + Lab,7,1,No
+pilot/medium-daily,P00000503,2,2,GP + Lab,7,1,No
+pilot/medium-daily,P00000504,1,1,Lab,7,0,No
+pilot/medium-daily,P00000505,2,2,GP + Hospital,8,1,No
+pilot/medium-daily,P00000506,4,3,GP + Hospital + Lab,8,1,No
+pilot/medium-daily,P00000507,1,1,GP,8,1,No
+pilot/medium-daily,P00000508,1,1,GP,8,1,No
+pilot/medium-daily,P00000509,2,2,GP + Hospital,8,1,No
+pilot/medium-daily,P00000510,2,2,GP + Hospital,8,1,No
+pilot/medium-daily,P00000511,1,1,GP,8,1,No
+pilot/medium-daily,P00000512,2,2,GP + Hospital,8,1,No
+pilot/medium-daily,P00000513,3,3,GP + Hospital + Lab,8,1,No
+pilot/medium-daily,P00000514,3,3,GP + Hospital + Lab,8,1,No
+pilot/medium-daily,P00000515,1,1,GP,8,1,No
+pilot/medium-daily,P00000516,4,3,GP + Hospital + Lab,8,1,No
+pilot/medium-daily,P00000517,3,3,GP + Hospital + Lab,8,1,No
+pilot/medium-daily,P00000518,2,2,GP + Hospital,8,1,No
+pilot/medium-daily,P00000519,2,2,GP + Lab,8,0,No
+pilot/medium-daily,P00000520,3,3,GP + Hospital + Lab,8,1,No
+pilot/medium-daily,P00000521,2,1,GP,8,1,No
+pilot/medium-daily,P00000522,2,2,GP + Hospital,8,1,No
+pilot/medium-daily,P00000523,2,2,GP + Lab,8,1,No
+pilot/medium-daily,P00000524,1,1,GP,8,1,No
+pilot/medium-daily,P00000525,2,2,GP + Hospital,8,1,No
+pilot/medium-daily,P00000526,1,1,GP,8,1,No
+pilot/medium-daily,P00000527,4,3,GP + Hospital + Lab,8,1,No
+pilot/medium-daily,P00000528,3,3,GP + Hospital + Lab,8,1,No
+pilot/medium-daily,P00000529,2,2,GP + Hospital,8,1,No
+pilot/medium-daily,P00000530,2,2,GP + Hospital,8,1,No
+pilot/medium-daily,P00000531,3,3,GP + Hospital + Lab,8,1,No
+pilot/medium-daily,P00000532,2,1,Hospital,8,1,No
+pilot/medium-daily,P00000533,2,2,GP + Hospital,8,1,No
+pilot/medium-daily,P00000534,2,2,GP + Hospital,8,1,No
+pilot/medium-daily,P00000535,3,3,GP + Hospital + Lab,8,1,No
+pilot/medium-daily,P00000536,1,1,Hospital,8,1,No
+pilot/medium-daily,P00000537,1,1,Hospital,8,1,No
+pilot/medium-daily,P00000538,3,3,GP + Hospital + Lab,8,1,No
+pilot/medium-daily,P00000539,3,3,GP + Hospital + Lab,8,1,No
+pilot/medium-daily,P00000540,2,2,GP + Hospital,8,1,No
+pilot/medium-daily,P00000541,4,3,GP + Hospital + Lab,8,1,No
+pilot/medium-daily,P00000542,2,2,GP + Hospital,8,1,No
+pilot/medium-daily,P00000543,3,3,GP + Hospital + Lab,8,1,No
+pilot/medium-daily,P00000544,3,3,GP + Hospital + Lab,8,1,No
+pilot/medium-daily,P00000545,3,3,GP + Hospital + Lab,8,1,No
+pilot/medium-daily,P00000547,3,3,GP + Hospital + Lab,8,1,No
+pilot/medium-daily,P00000548,1,1,Lab,8,0,No
+pilot/medium-daily,P00000549,2,2,GP + Lab,8,1,No
+pilot/medium-daily,P00000550,3,2,GP + Lab,8,1,No
+pilot/medium-daily,P00000551,2,2,GP + Lab,8,1,No
+pilot/medium-daily,P00000552,2,2,GP + Lab,8,1,No
+pilot/medium-daily,P00000553,2,2,GP + Lab,8,1,No
+pilot/medium-daily,P00000554,2,2,GP + Hospital,9,1,No
+pilot/medium-daily,P00000555,2,2,GP + Hospital,9,1,No
+pilot/medium-daily,P00000556,2,2,GP + Hospital,9,1,No
+pilot/medium-daily,P00000557,1,1,GP,9,1,No
+pilot/medium-daily,P00000558,1,1,GP,9,1,No
+pilot/medium-daily,P00000559,3,3,GP + Hospital + Lab,9,1,No
+pilot/medium-daily,P00000560,4,3,GP + Hospital + Lab,9,1,No
+pilot/medium-daily,P00000561,2,1,GP,9,1,No
+pilot/medium-daily,P00000562,1,1,GP,9,0,No
+pilot/medium-daily,P00000563,2,2,GP + Lab,9,1,No
+pilot/medium-daily,P00000564,3,3,GP + Hospital + Lab,9,1,No
+pilot/medium-daily,P00000565,3,3,GP + Hospital + Lab,9,1,No
+pilot/medium-daily,P00000566,2,2,GP + Hospital,9,1,No
+pilot/medium-daily,P00000567,4,3,GP + Hospital + Lab,9,1,No
+pilot/medium-daily,P00000568,1,1,GP,9,1,No
+pilot/medium-daily,P00000569,1,1,GP,9,1,No
+pilot/medium-daily,P00000570,1,1,GP,9,1,No
+pilot/medium-daily,P00000571,1,1,GP,9,1,No
+pilot/medium-daily,P00000573,2,2,GP + Hospital,9,1,No
+pilot/medium-daily,P00000574,1,1,GP,9,1,No
+pilot/medium-daily,P00000575,2,2,GP + Hospital,9,1,No
+pilot/medium-daily,P00000576,1,1,Hospital,9,0,No
+pilot/medium-daily,P00000577,2,2,Hospital + Lab,9,1,No
+pilot/medium-daily,P00000578,2,2,GP + Hospital,9,1,No
+pilot/medium-daily,P00000579,2,2,Hospital + Lab,9,0,No
+pilot/medium-daily,P00000580,2,2,GP + Hospital,9,1,No
+pilot/medium-daily,P00000581,3,3,GP + Hospital + Lab,9,1,No
+pilot/medium-daily,P00000582,4,3,GP + Hospital + Lab,9,1,No
+pilot/medium-daily,P00000583,2,2,GP + Hospital,9,1,No
+pilot/medium-daily,P00000584,2,2,GP + Hospital,9,1,No
+pilot/medium-daily,P00000585,2,2,GP + Hospital,9,1,No
+pilot/medium-daily,P00000586,2,2,GP + Hospital,9,1,No
+pilot/medium-daily,P00000587,2,2,GP + Hospital,9,1,No
+pilot/medium-daily,P00000588,2,2,Hospital + Lab,9,1,No
+pilot/medium-daily,P00000589,2,2,GP + Hospital,9,1,No
+pilot/medium-daily,P00000590,3,3,GP + Hospital + Lab,9,1,No
+pilot/medium-daily,P00000591,1,1,Hospital,9,0,No
+pilot/medium-daily,P00000592,4,3,GP + Hospital + Lab,9,1,No
+pilot/medium-daily,P00000593,2,2,GP + Hospital,9,1,No
+pilot/medium-daily,P00000594,3,3,GP + Hospital + Lab,9,1,No
+pilot/medium-daily,P00000595,1,1,GP,28,1,No
+pilot/medium-daily,P00000596,3,3,GP + Hospital + Lab,9,1,No
+pilot/medium-daily,P00000597,3,3,GP + Hospital + Lab,9,1,No
+pilot/medium-daily,P00000598,2,2,GP + Lab,9,1,No
+pilot/medium-daily,P00000599,4,3,GP + Hospital + Lab,9,1,No
+pilot/medium-daily,P00000600,3,3,GP + Hospital + Lab,9,1,No
+pilot/medium-daily,P00000601,3,3,GP + Hospital + Lab,9,1,No
+pilot/medium-daily,P00000602,3,2,Hospital + Lab,9,1,No
+pilot/medium-daily,P00000603,2,2,GP + Lab,9,1,No
+pilot/medium-daily,P00000604,3,3,GP + Hospital + Lab,9,1,No
+pilot/medium-daily,P00000605,3,3,GP + Hospital + Lab,9,1,No
+pilot/medium-daily,P00000606,2,2,GP + Lab,9,1,No
+pilot/medium-daily,P00000608,2,2,GP + Hospital,10,1,No
+pilot/medium-daily,P00000610,2,2,GP + Hospital,10,1,No
+pilot/medium-daily,P00000611,1,1,GP,10,1,No
+pilot/medium-daily,P00000612,2,2,GP + Hospital,10,1,No
+pilot/medium-daily,P00000613,2,2,GP + Hospital,10,1,No
+pilot/medium-daily,P00000614,1,1,GP,10,1,No
+pilot/medium-daily,P00000615,2,1,GP,10,1,No
+pilot/medium-daily,P00000616,3,2,GP + Hospital,10,1,No
+pilot/medium-daily,P00000617,2,2,GP + Hospital,10,1,No
+pilot/medium-daily,P00000618,2,2,GP + Lab,10,0,No
+pilot/medium-daily,P00000619,2,2,GP + Hospital,10,1,No
+pilot/medium-daily,P00000620,2,2,GP + Lab,10,1,No
+pilot/medium-daily,P00000621,3,2,GP + Hospital,10,1,No
+pilot/medium-daily,P00000622,1,1,GP,10,1,No
+pilot/medium-daily,P00000623,2,2,GP + Hospital,10,1,No
+pilot/medium-daily,P00000624,3,3,GP + Hospital + Lab,10,1,No
+pilot/medium-daily,P00000625,3,3,GP + Hospital + Lab,10,1,No
+pilot/medium-daily,P00000626,2,2,GP + Lab,10,1,No
+pilot/medium-daily,P00000627,2,2,GP + Hospital,10,1,No
+pilot/medium-daily,P00000628,2,2,GP + Hospital,10,1,No
+pilot/medium-daily,P00000629,2,2,GP + Hospital,10,1,No
+pilot/medium-daily,P00000630,2,2,Hospital + Lab,10,1,No
+pilot/medium-daily,P00000631,1,1,Hospital,10,0,No
+pilot/medium-daily,P00000632,3,3,GP + Hospital + Lab,10,1,No
+pilot/medium-daily,P00000633,2,2,GP + Hospital,10,1,No
+pilot/medium-daily,P00000634,2,2,GP + Hospital,10,1,No
+pilot/medium-daily,P00000635,2,2,GP + Hospital,10,0,No
+pilot/medium-daily,P00000636,4,3,GP + Hospital + Lab,10,1,No
+pilot/medium-daily,P00000637,3,3,GP + Hospital + Lab,10,1,No
+pilot/medium-daily,P00000638,2,2,GP + Hospital,10,1,No
+pilot/medium-daily,P00000639,1,1,Lab,10,0,No
+pilot/medium-daily,P00000640,2,2,Hospital + Lab,10,1,No
+pilot/medium-daily,P00000641,2,2,Hospital + Lab,10,0,No
+pilot/medium-daily,P00000642,2,2,GP + Lab,10,1,No
+pilot/medium-daily,P00000643,3,3,GP + Hospital + Lab,10,0,No
+pilot/medium-daily,P00000644,2,2,GP + Lab,10,1,No
+pilot/medium-daily,P00000645,2,2,GP + Lab,10,1,No
+pilot/medium-daily,P00000646,2,2,Hospital + Lab,10,1,No
+pilot/medium-daily,P00000647,2,2,GP + Lab,10,1,No
+pilot/medium-daily,P00000649,1,1,Lab,10,0,No
+pilot/medium-daily,P00000650,2,2,GP + Lab,10,1,No
+pilot/medium-daily,P00000651,1,1,Lab,10,0,No
+pilot/medium-daily,P00000652,1,1,GP,11,1,No
+pilot/medium-daily,P00000654,1,1,GP,11,0,No
+pilot/medium-daily,P00000655,1,1,GP,11,1,No
+pilot/medium-daily,P00000656,3,3,GP + Hospital + Lab,11,1,No
+pilot/medium-daily,P00000657,3,2,GP + Hospital,11,1,No
+pilot/medium-daily,P00000658,5,3,GP + Hospital + Lab,11,1,No
+pilot/medium-daily,P00000659,3,3,GP + Hospital + Lab,11,1,No
+pilot/medium-daily,P00000660,2,2,GP + Hospital,11,1,No
+pilot/medium-daily,P00000661,1,1,GP,11,1,No
+pilot/medium-daily,P00000662,1,1,GP,11,1,No
+pilot/medium-daily,P00000663,2,2,GP + Lab,11,1,No
+pilot/medium-daily,P00000664,1,1,GP,11,1,No
+pilot/medium-daily,P00000665,3,3,GP + Hospital + Lab,11,1,No
+pilot/medium-daily,P00000666,2,2,GP + Hospital,11,1,No
+pilot/medium-daily,P00000667,1,1,GP,11,1,No
+pilot/medium-daily,P00000668,1,1,GP,11,1,No
+pilot/medium-daily,P00000669,1,1,GP,11,0,No
+pilot/medium-daily,P00000670,2,2,GP + Lab,11,1,No
+pilot/medium-daily,P00000671,1,1,GP,11,1,No
+pilot/medium-daily,P00000672,2,2,GP + Hospital,11,1,No
+pilot/medium-daily,P00000673,2,2,GP + Hospital,11,1,No
+pilot/medium-daily,P00000674,4,3,GP + Hospital + Lab,11,1,No
+pilot/medium-daily,P00000675,2,2,GP + Hospital,11,1,No
+pilot/medium-daily,P00000676,3,3,GP + Hospital + Lab,11,1,No
+pilot/medium-daily,P00000677,2,2,GP + Hospital,11,1,No
+pilot/medium-daily,P00000678,2,2,GP + Hospital,11,1,No
+pilot/medium-daily,P00000679,2,2,GP + Hospital,11,1,No
+pilot/medium-daily,P00000680,2,2,GP + Hospital,11,1,No
+pilot/medium-daily,P00000681,3,3,GP + Hospital + Lab,11,1,No
+pilot/medium-daily,P00000682,3,2,GP + Hospital,11,1,No
+pilot/medium-daily,P00000683,2,2,GP + Hospital,11,1,No
+pilot/medium-daily,P00000684,1,1,Hospital,11,0,No
+pilot/medium-daily,P00000685,2,2,GP + Hospital,11,1,No
+pilot/medium-daily,P00000686,3,3,GP + Hospital + Lab,11,1,No
+pilot/medium-daily,P00000687,3,2,GP + Hospital,11,1,No
+pilot/medium-daily,P00000688,2,2,GP + Hospital,11,1,No
+pilot/medium-daily,P00000689,2,2,Hospital + Lab,11,1,No
+pilot/medium-daily,P00000690,1,1,Hospital,11,1,No
+pilot/medium-daily,P00000691,3,2,GP + Hospital,11,1,No
+pilot/medium-daily,P00000692,2,2,GP + Hospital,11,1,No
+pilot/medium-daily,P00000693,2,2,GP + Lab,11,1,No
+pilot/medium-daily,P00000694,3,3,GP + Hospital + Lab,11,1,No
+pilot/medium-daily,P00000695,1,1,Lab,11,1,No
+pilot/medium-daily,P00000696,2,2,GP + Lab,11,1,No
+pilot/medium-daily,P00000697,2,2,GP + Lab,11,1,No
+pilot/medium-daily,P00000698,3,3,GP + Hospital + Lab,11,1,No
+pilot/medium-daily,P00000699,2,2,Hospital + Lab,11,1,No
+pilot/medium-daily,P00000700,3,3,GP + Hospital + Lab,11,1,No
+pilot/medium-daily,P00000701,2,2,GP + Lab,11,1,No
+pilot/medium-daily,P00000702,2,2,GP + Lab,11,1,No
+pilot/medium-daily,P00000703,1,1,Lab,11,0,No
+pilot/medium-daily,P00000704,2,2,Hospital + Lab,11,1,No
+pilot/medium-daily,P00000705,3,3,GP + Hospital + Lab,11,1,No
+pilot/medium-daily,P00000706,1,1,GP,12,1,No
+pilot/medium-daily,P00000707,2,2,GP + Hospital,12,1,No
+pilot/medium-daily,P00000708,2,2,GP + Hospital,12,1,No
+pilot/medium-daily,P00000709,1,1,GP,12,1,No
+pilot/medium-daily,P00000710,2,2,GP + Hospital,12,1,No
+pilot/medium-daily,P00000711,1,1,GP,12,1,No
+pilot/medium-daily,P00000712,2,2,GP + Lab,12,1,No
+pilot/medium-daily,P00000713,2,2,GP + Lab,12,1,No
+pilot/medium-daily,P00000714,4,3,GP + Hospital + Lab,12,1,No
+pilot/medium-daily,P00000715,3,3,GP + Hospital + Lab,12,1,No
+pilot/medium-daily,P00000716,3,3,GP + Hospital + Lab,12,1,No
+pilot/medium-daily,P00000717,2,2,GP + Hospital,12,1,No
+pilot/medium-daily,P00000718,2,2,GP + Hospital,12,1,No
+pilot/medium-daily,P00000719,4,3,GP + Hospital + Lab,12,1,No
+pilot/medium-daily,P00000720,3,2,GP + Hospital,12,1,No
+pilot/medium-daily,P00000721,2,2,GP + Hospital,12,1,No
+pilot/medium-daily,P00000722,2,2,GP + Hospital,12,1,No
+pilot/medium-daily,P00000723,2,2,GP + Hospital,12,1,No
+pilot/medium-daily,P00000724,2,2,GP + Hospital,12,1,No
+pilot/medium-daily,P00000725,2,2,GP + Hospital,12,1,No
+pilot/medium-daily,P00000726,2,2,Hospital + Lab,12,1,No
+pilot/medium-daily,P00000727,2,2,GP + Hospital,12,2,Yes
+pilot/medium-daily,P00000729,1,1,Lab,12,0,No
+pilot/medium-daily,P00000730,4,2,GP + Lab,12,2,Yes
+pilot/medium-daily,P00000731,1,1,Lab,12,1,No
+pilot/medium-daily,P00000732,2,2,GP + Lab,12,1,No
+pilot/medium-daily,P00000733,1,1,Lab,12,0,No
+pilot/medium-daily,P00000734,3,3,GP + Hospital + Lab,12,1,No
+pilot/medium-daily,P00000735,3,3,GP + Hospital + Lab,12,1,No
+pilot/medium-daily,P00000736,3,2,GP + Lab,12,1,No
+pilot/medium-daily,P00000737,3,3,GP + Hospital + Lab,12,1,No
+pilot/medium-daily,P00000738,3,2,GP + Hospital,13,1,No
+pilot/medium-daily,P00000739,2,2,GP + Lab,13,1,No
+pilot/medium-daily,P00000740,2,2,GP + Hospital,13,1,No
+pilot/medium-daily,P00000741,1,1,GP,13,1,No
+pilot/medium-daily,P00000742,2,2,GP + Hospital,13,1,No
+pilot/medium-daily,P00000743,1,1,GP,13,1,No
+pilot/medium-daily,P00000744,2,2,GP + Hospital,13,1,No
+pilot/medium-daily,P00000745,2,2,GP + Lab,13,1,No
+pilot/medium-daily,P00000746,2,2,GP + Hospital,13,1,No
+pilot/medium-daily,P00000747,2,2,GP + Hospital,13,1,No
+pilot/medium-daily,P00000748,2,2,GP + Hospital,13,1,No
+pilot/medium-daily,P00000749,1,1,GP,13,1,No
+pilot/medium-daily,P00000750,2,2,GP + Lab,13,1,No
+pilot/medium-daily,P00000751,3,3,GP + Hospital + Lab,13,1,No
+pilot/medium-daily,P00000752,1,1,GP,13,1,No
+pilot/medium-daily,P00000753,2,2,GP + Hospital,13,1,No
+pilot/medium-daily,P00000754,1,1,GP,13,1,No
+pilot/medium-daily,P00000755,2,2,GP + Hospital,13,1,No
+pilot/medium-daily,P00000756,2,2,GP + Lab,13,1,No
+pilot/medium-daily,P00000757,1,1,GP,13,1,No
+pilot/medium-daily,P00000758,1,1,GP,13,0,No
+pilot/medium-daily,P00000759,2,2,GP + Hospital,13,1,No
+pilot/medium-daily,P00000761,2,2,GP + Hospital,13,1,No
+pilot/medium-daily,P00000762,2,2,GP + Lab,13,1,No
+pilot/medium-daily,P00000763,2,2,GP + Hospital,13,1,No
+pilot/medium-daily,P00000764,2,2,GP + Hospital,13,1,No
+pilot/medium-daily,P00000765,3,3,GP + Hospital + Lab,13,1,No
+pilot/medium-daily,P00000766,2,2,Hospital + Lab,13,1,No
+pilot/medium-daily,P00000767,2,2,Hospital + Lab,13,0,No
+pilot/medium-daily,P00000768,2,2,GP + Hospital,13,1,No
+pilot/medium-daily,P00000769,1,1,Hospital,13,1,No
+pilot/medium-daily,P00000770,2,2,GP + Hospital,13,1,No
+pilot/medium-daily,P00000771,2,2,GP + Hospital,13,1,No
+pilot/medium-daily,P00000772,1,1,Hospital,13,0,No
+pilot/medium-daily,P00000773,2,2,GP + Hospital,13,1,No
+pilot/medium-daily,P00000774,1,1,Hospital,13,0,No
+pilot/medium-daily,P00000775,1,1,Hospital,13,1,No
+pilot/medium-daily,P00000776,2,2,GP + Hospital,13,1,No
+pilot/medium-daily,P00000777,3,3,GP + Hospital + Lab,13,1,No
+pilot/medium-daily,P00000778,3,3,GP + Hospital + Lab,13,1,No
+pilot/medium-daily,P00000779,3,3,GP + Hospital + Lab,13,1,No
+pilot/medium-daily,P00000780,3,3,GP + Hospital + Lab,13,1,No
+pilot/medium-daily,P00000781,3,3,GP + Hospital + Lab,13,1,No
+pilot/medium-daily,P00000782,2,2,GP + Lab,13,1,No
+pilot/medium-daily,P00000783,4,3,GP + Hospital + Lab,13,1,No
+pilot/medium-daily,P00000785,2,2,GP + Hospital,14,1,No
+pilot/medium-daily,P00000786,2,2,GP + Hospital,14,1,No
+pilot/medium-daily,P00000787,1,1,GP,14,1,No
+pilot/medium-daily,P00000788,1,1,GP,14,1,No
+pilot/medium-daily,P00000789,1,1,GP,14,1,No
+pilot/medium-daily,P00000790,3,3,GP + Hospital + Lab,14,1,No
+pilot/medium-daily,P00000791,2,2,GP + Hospital,14,1,No
+pilot/medium-daily,P00000792,2,2,GP + Lab,14,1,No
+pilot/medium-daily,P00000793,1,1,GP,14,1,No
+pilot/medium-daily,P00000794,3,3,GP + Hospital + Lab,14,1,No
+pilot/medium-daily,P00000795,1,1,GP,14,1,No
+pilot/medium-daily,P00000796,2,2,GP + Hospital,14,1,No
+pilot/medium-daily,P00000797,2,2,GP + Lab,14,1,No
+pilot/medium-daily,P00000798,2,2,GP + Hospital,14,1,No
+pilot/medium-daily,P00000799,2,2,GP + Hospital,14,1,No
+pilot/medium-daily,P00000800,2,1,GP,14,1,No
+pilot/medium-daily,P00000801,2,2,GP + Hospital,14,1,No
+pilot/medium-daily,P00000802,1,1,GP,14,1,No
+pilot/medium-daily,P00000803,3,3,GP + Hospital + Lab,14,1,No
+pilot/medium-daily,P00000804,3,3,GP + Hospital + Lab,14,1,No
+pilot/medium-daily,P00000805,2,2,GP + Hospital,14,1,No
+pilot/medium-daily,P00000807,1,1,Hospital,14,1,No
+pilot/medium-daily,P00000808,3,3,GP + Hospital + Lab,14,1,No
+pilot/medium-daily,P00000809,3,3,GP + Hospital + Lab,14,1,No
+pilot/medium-daily,P00000810,2,2,GP + Hospital,14,1,No
+pilot/medium-daily,P00000811,1,1,Hospital,14,0,No
+pilot/medium-daily,P00000812,2,1,Hospital,14,1,No
+pilot/medium-daily,P00000813,1,1,Hospital,14,0,No
+pilot/medium-daily,P00000814,2,2,GP + Hospital,14,1,No
+pilot/medium-daily,P00000815,2,2,GP + Hospital,14,1,No
+pilot/medium-daily,P00000816,3,3,GP + Hospital + Lab,14,1,No
+pilot/medium-daily,P00000817,3,3,GP + Hospital + Lab,14,1,No
+pilot/medium-daily,P00000818,2,2,Hospital + Lab,14,1,No
+pilot/medium-daily,P00000819,3,2,GP + Hospital,14,1,No
+pilot/medium-daily,P00000820,3,3,GP + Hospital + Lab,14,1,No
+pilot/medium-daily,P00000821,3,3,GP + Hospital + Lab,14,1,No
+pilot/medium-daily,P00000822,2,2,GP + Hospital,14,1,No
+pilot/medium-daily,P00000823,1,1,Lab,14,0,No
+pilot/medium-daily,P00000824,1,1,Lab,14,0,No
+pilot/medium-daily,P00000825,2,2,GP + Lab,14,1,No
+pilot/medium-daily,P00000826,3,3,GP + Hospital + Lab,14,1,No
+pilot/medium-daily,P00000827,2,1,Lab,14,1,No
+pilot/medium-daily,P00000828,3,3,GP + Hospital + Lab,14,1,No
+pilot/medium-daily,P00000830,2,2,GP + Lab,14,1,No
+pilot/medium-daily,P00000831,2,2,GP + Lab,14,1,No
+pilot/medium-daily,P00000832,2,2,Hospital + Lab,14,0,No
+pilot/medium-daily,P00000833,3,3,GP + Hospital + Lab,14,1,No
+pilot/medium-daily,P00000834,2,2,GP + Lab,14,1,No
+pilot/medium-daily,P00000835,1,1,Lab,14,0,No
+pilot/medium-daily,P00000836,3,3,GP + Hospital + Lab,14,1,No
+pilot/medium-daily,P00000837,3,3,GP + Hospital + Lab,14,1,No
+pilot/medium-daily,P00000838,2,2,GP + Lab,15,1,No
+pilot/medium-daily,P00000839,3,3,GP + Hospital + Lab,15,1,No
+pilot/medium-daily,P00000840,3,3,GP + Hospital + Lab,15,1,No
+pilot/medium-daily,P00000841,3,3,GP + Hospital + Lab,15,1,No
+pilot/medium-daily,P00000842,3,3,GP + Hospital + Lab,15,1,No
+pilot/medium-daily,P00000843,2,2,GP + Hospital,15,1,No
+pilot/medium-daily,P00000844,1,1,GP,15,0,No
+pilot/medium-daily,P00000845,3,2,GP + Lab,15,1,No
+pilot/medium-daily,P00000846,1,1,GP,15,1,No
+pilot/medium-daily,P00000847,1,1,GP,15,1,No
+pilot/medium-daily,P00000848,1,1,GP,15,1,No
+pilot/medium-daily,P00000849,2,2,GP + Lab,15,1,No
+pilot/medium-daily,P00000850,1,1,GP,15,0,No
+pilot/medium-daily,P00000851,2,2,GP + Hospital,15,1,No
+pilot/medium-daily,P00000852,2,2,GP + Hospital,15,1,No
+pilot/medium-daily,P00000853,3,3,GP + Hospital + Lab,15,1,No
+pilot/medium-daily,P00000854,1,1,GP,15,1,No
+pilot/medium-daily,P00000855,2,2,GP + Hospital,15,1,No
+pilot/medium-daily,P00000856,2,2,GP + Hospital,15,1,No
+pilot/medium-daily,P00000857,2,2,GP + Lab,15,1,No
+pilot/medium-daily,P00000858,1,1,GP,15,1,No
+pilot/medium-daily,P00000859,2,2,GP + Hospital,15,1,No
+pilot/medium-daily,P00000860,1,1,GP,15,1,No
+pilot/medium-daily,P00000861,1,1,Hospital,15,1,No
+pilot/medium-daily,P00000862,2,2,GP + Hospital,15,1,No
+pilot/medium-daily,P00000863,1,1,Hospital,15,0,No
+pilot/medium-daily,P00000864,2,2,GP + Hospital,15,1,No
+pilot/medium-daily,P00000865,3,2,GP + Hospital,15,1,No
+pilot/medium-daily,P00000866,1,1,Hospital,15,0,No
+pilot/medium-daily,P00000867,1,1,Hospital,15,1,No
+pilot/medium-daily,P00000868,2,2,GP + Hospital,15,1,No
+pilot/medium-daily,P00000869,2,2,GP + Hospital,15,1,No
+pilot/medium-daily,P00000870,2,2,GP + Hospital,15,1,No
+pilot/medium-daily,P00000871,3,3,GP + Hospital + Lab,15,1,No
+pilot/medium-daily,P00000872,2,2,Hospital + Lab,15,1,No
+pilot/medium-daily,P00000873,3,3,GP + Hospital + Lab,15,1,No
+pilot/medium-daily,P00000874,3,3,GP + Hospital + Lab,15,1,No
+pilot/medium-daily,P00000875,3,3,GP + Hospital + Lab,15,1,No
+pilot/medium-daily,P00000876,2,2,GP + Lab,15,0,No
+pilot/medium-daily,P00000877,2,2,Hospital + Lab,15,1,No
+pilot/medium-daily,P00000878,1,1,Lab,15,0,No
+pilot/medium-daily,P00000879,3,3,GP + Hospital + Lab,15,1,No
+pilot/medium-daily,P00000880,3,3,GP + Hospital + Lab,16,1,No
+pilot/medium-daily,P00000881,1,1,GP,16,0,No
+pilot/medium-daily,P00000882,2,1,GP,16,1,No
+pilot/medium-daily,P00000883,3,3,GP + Hospital + Lab,16,1,No
+pilot/medium-daily,P00000884,1,1,GP,16,1,No
+pilot/medium-daily,P00000885,2,2,GP + Lab,16,1,No
+pilot/medium-daily,P00000886,1,1,GP,16,1,No
+pilot/medium-daily,P00000887,4,3,GP + Hospital + Lab,16,1,No
+pilot/medium-daily,P00000888,2,2,GP + Hospital,16,1,No
+pilot/medium-daily,P00000889,2,2,GP + Lab,16,1,No
+pilot/medium-daily,P00000890,2,2,GP + Hospital,16,1,No
+pilot/medium-daily,P00000891,2,2,GP + Hospital,16,1,No
+pilot/medium-daily,P00000892,2,2,GP + Hospital,16,1,No
+pilot/medium-daily,P00000893,4,3,GP + Hospital + Lab,16,1,No
+pilot/medium-daily,P00000894,2,2,GP + Lab,16,1,No
+pilot/medium-daily,P00000895,2,2,GP + Hospital,16,1,No
+pilot/medium-daily,P00000896,1,1,Hospital,16,0,No
+pilot/medium-daily,P00000897,1,1,Hospital,16,1,No
+pilot/medium-daily,P00000898,4,3,GP + Hospital + Lab,16,1,No
+pilot/medium-daily,P00000899,2,2,GP + Hospital,16,1,No
+pilot/medium-daily,P00000900,3,3,GP + Hospital + Lab,16,1,No
+pilot/medium-daily,P00000901,2,2,GP + Hospital,16,1,No
+pilot/medium-daily,P00000902,2,2,GP + Hospital,16,1,No
+pilot/medium-daily,P00000903,1,1,Hospital,16,0,No
+pilot/medium-daily,P00000904,2,2,GP + Hospital,16,1,No
+pilot/medium-daily,P00000905,2,2,GP + Hospital,16,1,No
+pilot/medium-daily,P00000906,1,1,Hospital,16,1,No
+pilot/medium-daily,P00000907,3,3,GP + Hospital + Lab,16,1,No
+pilot/medium-daily,P00000908,2,2,GP + Hospital,16,1,No
+pilot/medium-daily,P00000909,3,3,GP + Hospital + Lab,16,1,No
+pilot/medium-daily,P00000911,2,2,GP + Lab,16,1,No
+pilot/medium-daily,P00000912,2,2,GP + Lab,16,1,No
+pilot/medium-daily,P00000913,1,1,Lab,16,0,No
+pilot/medium-daily,P00000914,1,1,GP,17,1,No
+pilot/medium-daily,P00000915,2,2,GP + Lab,17,1,No
+pilot/medium-daily,P00000916,4,3,GP + Hospital + Lab,17,1,No
+pilot/medium-daily,P00000917,3,2,GP + Lab,17,1,No
+pilot/medium-daily,P00000918,2,2,GP + Lab,17,1,No
+pilot/medium-daily,P00000919,2,2,GP + Hospital,17,1,No
+pilot/medium-daily,P00000920,2,2,GP + Hospital,17,1,No
+pilot/medium-daily,P00000921,2,2,GP + Hospital,17,1,No
+pilot/medium-daily,P00000922,1,1,GP,17,1,No
+pilot/medium-daily,P00000923,1,1,GP,17,1,No
+pilot/medium-daily,P00000924,2,2,GP + Hospital,17,1,No
+pilot/medium-daily,P00000925,1,1,GP,17,1,No
+pilot/medium-daily,P00000926,2,2,GP + Hospital,17,1,No
+pilot/medium-daily,P00000927,3,2,GP + Hospital,17,1,No
+pilot/medium-daily,P00000928,3,3,GP + Hospital + Lab,17,1,No
+pilot/medium-daily,P00000929,2,2,Hospital + Lab,17,1,No
+pilot/medium-daily,P00000930,2,2,GP + Hospital,17,1,No
+pilot/medium-daily,P00000931,1,1,Hospital,17,1,No
+pilot/medium-daily,P00000932,3,3,GP + Hospital + Lab,17,1,No
+pilot/medium-daily,P00000933,3,3,GP + Hospital + Lab,17,1,No
+pilot/medium-daily,P00000934,2,2,GP + Hospital,17,1,No
+pilot/medium-daily,P00000935,3,3,GP + Hospital + Lab,17,1,No
+pilot/medium-daily,P00000937,3,3,GP + Hospital + Lab,17,1,No
+pilot/medium-daily,P00000938,2,2,GP + Hospital,17,1,No
+pilot/medium-daily,P00000939,1,1,Hospital,17,1,No
+pilot/medium-daily,P00000940,1,1,Hospital,17,1,No
+pilot/medium-daily,P00000941,2,2,Hospital + Lab,17,0,No
+pilot/medium-daily,P00000942,1,1,Hospital,17,0,No
+pilot/medium-daily,P00000943,1,1,Lab,17,0,No
+pilot/medium-daily,P00000944,3,3,GP + Hospital + Lab,17,1,No
+pilot/medium-daily,P00000945,4,3,GP + Hospital + Lab,17,1,No
+pilot/medium-daily,P00000946,2,2,GP + Lab,17,1,No
+pilot/medium-daily,P00000947,4,3,GP + Hospital + Lab,17,1,No
+pilot/medium-daily,P00000948,2,2,GP + Lab,17,1,No
+pilot/medium-daily,P00000949,1,1,GP,18,0,No
+pilot/medium-daily,P00000951,1,1,GP,18,1,No
+pilot/medium-daily,P00000952,2,2,GP + Hospital,18,1,No
+pilot/medium-daily,P00000953,1,1,GP,18,1,No
+pilot/medium-daily,P00000954,1,1,GP,18,1,No
+pilot/medium-daily,P00000955,2,2,GP + Hospital,18,1,No
+pilot/medium-daily,P00000956,2,2,GP + Hospital,18,1,No
+pilot/medium-daily,P00000957,1,1,GP,18,1,No
+pilot/medium-daily,P00000959,2,2,GP + Hospital,18,1,No
+pilot/medium-daily,P00000960,1,1,GP,18,1,No
+pilot/medium-daily,P00000961,1,1,GP,18,1,No
+pilot/medium-daily,P00000962,1,1,GP,18,1,No
+pilot/medium-daily,P00000963,2,2,GP + Hospital,18,1,No
+pilot/medium-daily,P00000964,2,2,GP + Hospital,18,1,No
+pilot/medium-daily,P00000965,3,3,GP + Hospital + Lab,18,1,No
+pilot/medium-daily,P00000966,2,2,GP + Hospital,18,1,No
+pilot/medium-daily,P00000967,2,2,Hospital + Lab,18,1,No
+pilot/medium-daily,P00000968,5,3,GP + Hospital + Lab,18,1,No
+pilot/medium-daily,P00000969,1,1,Hospital,18,1,No
+pilot/medium-daily,P00000970,1,1,Hospital,18,1,No
+pilot/medium-daily,P00000971,4,3,GP + Hospital + Lab,18,1,No
+pilot/medium-daily,P00000972,3,2,GP + Hospital,18,0,No
+pilot/medium-daily,P00000973,2,2,GP + Hospital,18,1,No
+pilot/medium-daily,P00000974,2,2,GP + Hospital,18,1,No
+pilot/medium-daily,P00000975,1,1,Lab,18,0,No
+pilot/medium-daily,P00000976,1,1,Lab,18,0,No
+pilot/medium-daily,P00000977,2,2,Hospital + Lab,18,1,No
+pilot/medium-daily,P00000978,1,1,Lab,18,0,No
+pilot/medium-daily,P00000979,3,3,GP + Hospital + Lab,18,1,No
+pilot/medium-daily,P00000980,2,2,GP + Lab,18,1,No
+pilot/medium-daily,P00000981,1,1,Lab,18,0,No
+pilot/medium-daily,P00000982,3,3,GP + Hospital + Lab,18,1,No
+pilot/medium-daily,P00000983,2,2,GP + Lab,18,1,No
+pilot/medium-daily,P00000984,2,2,GP + Lab,18,1,No
+pilot/medium-daily,P00000985,2,2,GP + Lab,19,1,No
+pilot/medium-daily,P00000986,1,1,GP,19,1,No
+pilot/medium-daily,P00000987,2,2,GP + Hospital,19,1,No
+pilot/medium-daily,P00000988,1,1,GP,19,1,No
+pilot/medium-daily,P00000989,1,1,GP,19,1,No
+pilot/medium-daily,P00000990,4,2,GP + Hospital,19,1,No
+pilot/medium-daily,P00000991,1,1,GP,19,1,No
+pilot/medium-daily,P00000992,2,2,GP + Hospital,19,1,No
+pilot/medium-daily,P00000993,1,1,GP,19,1,No
+pilot/medium-daily,P00000994,2,2,GP + Hospital,19,1,No
+pilot/medium-daily,P00000995,1,1,GP,19,1,No
+pilot/medium-daily,P00000996,2,2,GP + Hospital,19,1,No
+pilot/medium-daily,P00000997,1,1,GP,19,1,No
+pilot/medium-daily,P00000998,1,1,GP,19,1,No
+pilot/medium-daily,P00000999,2,2,GP + Lab,19,1,No
+pilot/medium-daily,P00001000,2,2,GP + Hospital,19,1,No
+pilot/medium-daily,P00001001,1,1,GP,19,1,No
+pilot/medium-daily,P00001002,3,3,GP + Hospital + Lab,19,1,No
+pilot/medium-daily,P00001003,2,2,GP + Hospital,19,1,No
+pilot/medium-daily,P00001004,2,2,GP + Hospital,19,1,No
+pilot/medium-daily,P00001005,2,2,GP + Hospital,19,1,No
+pilot/medium-daily,P00001006,1,1,GP,19,1,No
+pilot/medium-daily,P00001007,1,1,GP,19,1,No
+pilot/medium-daily,P00001008,1,1,GP,19,1,No
+pilot/medium-daily,P00001009,2,2,GP + Hospital,19,1,No
+pilot/medium-daily,P00001012,2,2,GP + Hospital,19,1,No
+pilot/medium-daily,P00001013,2,2,GP + Hospital,19,1,No
+pilot/medium-daily,P00001014,2,2,GP + Hospital,19,1,No
+pilot/medium-daily,P00001015,1,1,Hospital,19,1,No
+pilot/medium-daily,P00001016,2,2,GP + Hospital,19,1,No
+pilot/medium-daily,P00001017,1,1,Hospital,19,0,No
+pilot/medium-daily,P00001018,4,3,GP + Hospital + Lab,19,1,No
+pilot/medium-daily,P00001019,2,2,GP + Hospital,19,1,No
+pilot/medium-daily,P00001020,3,3,GP + Hospital + Lab,19,1,No
+pilot/medium-daily,P00001021,2,2,GP + Lab,19,1,No
+pilot/medium-daily,P00001022,1,1,Lab,19,0,No
+pilot/medium-daily,P00001023,1,1,Lab,19,0,No
+pilot/medium-daily,P00001024,1,1,Lab,19,0,No
+pilot/medium-daily,P00001025,1,1,Lab,19,0,No
+pilot/medium-daily,P00001027,2,2,GP + Hospital,20,1,No
+pilot/medium-daily,P00001028,1,1,GP,20,1,No
+pilot/medium-daily,P00001029,1,1,GP,20,1,No
+pilot/medium-daily,P00001030,1,1,GP,20,1,No
+pilot/medium-daily,P00001031,3,3,GP + Hospital + Lab,20,1,No
+pilot/medium-daily,P00001032,1,1,GP,20,1,No
+pilot/medium-daily,P00001033,1,1,GP,20,1,No
+pilot/medium-daily,P00001034,1,1,GP,20,0,No
+pilot/medium-daily,P00001035,3,3,GP + Hospital + Lab,20,1,No
+pilot/medium-daily,P00001036,1,1,GP,20,1,No
+pilot/medium-daily,P00001037,3,3,GP + Hospital + Lab,20,1,No
+pilot/medium-daily,P00001039,1,1,Hospital,20,1,No
+pilot/medium-daily,P00001040,2,2,GP + Hospital,20,1,No
+pilot/medium-daily,P00001041,3,2,GP + Hospital,20,1,No
+pilot/medium-daily,P00001042,3,3,GP + Hospital + Lab,20,1,No
+pilot/medium-daily,P00001043,4,3,GP + Hospital + Lab,20,1,No
+pilot/medium-daily,P00001044,2,2,GP + Hospital,20,1,No
+pilot/medium-daily,P00001045,1,1,Lab,20,0,No
+pilot/medium-daily,P00001046,1,1,Lab,20,0,No
+pilot/medium-daily,P00001047,2,2,GP + Lab,20,1,No
+pilot/medium-daily,P00001048,3,3,GP + Hospital + Lab,20,1,No
+pilot/medium-daily,P00001049,1,1,Lab,20,0,No
+pilot/medium-daily,P00001050,2,2,Hospital + Lab,20,1,No
+pilot/medium-daily,P00001052,1,1,GP,21,1,No
+pilot/medium-daily,P00001053,1,1,GP,21,1,No
+pilot/medium-daily,P00001054,1,1,GP,21,1,No
+pilot/medium-daily,P00001055,3,3,GP + Hospital + Lab,21,1,No
+pilot/medium-daily,P00001056,1,1,GP,21,1,No
+pilot/medium-daily,P00001057,2,2,GP + Hospital,21,1,No
+pilot/medium-daily,P00001058,2,2,GP + Lab,21,0,No
+pilot/medium-daily,P00001059,1,1,GP,21,1,No
+pilot/medium-daily,P00001060,2,2,GP + Hospital,21,1,No
+pilot/medium-daily,P00001061,2,2,GP + Hospital,21,1,No
+pilot/medium-daily,P00001062,2,2,GP + Hospital,21,1,No
+pilot/medium-daily,P00001063,2,2,GP + Hospital,21,1,No
+pilot/medium-daily,P00001064,1,1,Hospital,21,1,No
+pilot/medium-daily,P00001065,3,3,GP + Hospital + Lab,21,1,No
+pilot/medium-daily,P00001067,1,1,Hospital,21,1,No
+pilot/medium-daily,P00001068,1,1,Hospital,21,0,No
+pilot/medium-daily,P00001069,2,2,GP + Hospital,21,1,No
+pilot/medium-daily,P00001070,1,1,Hospital,21,0,No
+pilot/medium-daily,P00001071,1,1,Hospital,21,1,No
+pilot/medium-daily,P00001072,2,2,GP + Hospital,21,1,No
+pilot/medium-daily,P00001073,2,2,GP + Hospital,21,1,No
+pilot/medium-daily,P00001074,1,1,Lab,21,1,No
+pilot/medium-daily,P00001075,3,3,GP + Hospital + Lab,21,1,No
+pilot/medium-daily,P00001076,1,1,Lab,21,0,No
+pilot/medium-daily,P00001077,2,2,Hospital + Lab,21,1,No
+pilot/medium-daily,P00001078,1,1,Lab,21,1,No
+pilot/medium-daily,P00001079,2,2,GP + Lab,21,1,No
+pilot/medium-daily,P00001080,3,3,GP + Hospital + Lab,21,1,No
+pilot/medium-daily,P00001081,2,2,GP + Hospital,22,1,No
+pilot/medium-daily,P00001082,2,2,GP + Lab,22,1,No
+pilot/medium-daily,P00001083,2,2,GP + Lab,22,1,No
+pilot/medium-daily,P00001084,1,1,GP,22,1,No
+pilot/medium-daily,P00001085,1,1,GP,22,1,No
+pilot/medium-daily,P00001086,2,2,GP + Hospital,22,1,No
+pilot/medium-daily,P00001087,2,2,GP + Hospital,22,1,No
+pilot/medium-daily,P00001088,1,1,GP,22,1,No
+pilot/medium-daily,P00001089,2,1,GP,22,1,No
+pilot/medium-daily,P00001090,2,2,GP + Lab,22,0,No
+pilot/medium-daily,P00001091,1,1,GP,22,1,No
+pilot/medium-daily,P00001092,1,1,GP,22,1,No
+pilot/medium-daily,P00001093,1,1,GP,22,1,No
+pilot/medium-daily,P00001094,1,1,GP,22,1,No
+pilot/medium-daily,P00001095,1,1,GP,22,0,No
+pilot/medium-daily,P00001096,3,2,GP + Hospital,22,1,No
+pilot/medium-daily,P00001097,1,1,GP,22,1,No
+pilot/medium-daily,P00001098,2,2,GP + Lab,22,1,No
+pilot/medium-daily,P00001099,2,2,GP + Hospital,22,1,No
+pilot/medium-daily,P00001100,3,2,GP + Hospital,22,1,No
+pilot/medium-daily,P00001101,2,2,GP + Hospital,22,1,No
+pilot/medium-daily,P00001102,2,2,GP + Hospital,22,1,No
+pilot/medium-daily,P00001103,1,1,Hospital,22,0,No
+pilot/medium-daily,P00001105,1,1,Hospital,22,0,No
+pilot/medium-daily,P00001106,1,1,Hospital,22,1,No
+pilot/medium-daily,P00001107,3,3,GP + Hospital + Lab,22,1,No
+pilot/medium-daily,P00001108,3,2,GP + Hospital,22,1,No
+pilot/medium-daily,P00001109,3,2,GP + Lab,22,1,No
+pilot/medium-daily,P00001110,1,1,Lab,22,1,No
+pilot/medium-daily,P00001111,1,1,Lab,22,0,No
+pilot/medium-daily,P00001112,1,1,Lab,22,0,No
+pilot/medium-daily,P00001113,2,2,GP + Lab,23,1,No
+pilot/medium-daily,P00001114,1,1,GP,23,1,No
+pilot/medium-daily,P00001115,2,2,GP + Hospital,23,1,No
+pilot/medium-daily,P00001116,2,2,GP + Hospital,23,1,No
+pilot/medium-daily,P00001117,3,3,GP + Hospital + Lab,23,1,No
+pilot/medium-daily,P00001118,1,1,GP,23,1,No
+pilot/medium-daily,P00001119,2,2,GP + Hospital,23,1,No
+pilot/medium-daily,P00001120,2,2,Hospital + Lab,23,0,No
+pilot/medium-daily,P00001121,2,2,Hospital + Lab,23,1,No
+pilot/medium-daily,P00001122,1,1,Hospital,23,1,No
+pilot/medium-daily,P00001123,1,1,Hospital,23,0,No
+pilot/medium-daily,P00001124,1,1,Hospital,23,1,No
+pilot/medium-daily,P00001125,1,1,Lab,23,0,No
+pilot/medium-daily,P00001126,2,2,GP + Lab,23,1,No
+pilot/medium-daily,P00001127,1,1,Lab,23,0,No
+pilot/medium-daily,P00001128,2,2,GP + Lab,23,1,No
+pilot/medium-daily,P00001129,2,1,GP,24,1,No
+pilot/medium-daily,P00001130,1,1,GP,24,1,No
+pilot/medium-daily,P00001131,1,1,GP,24,1,No
+pilot/medium-daily,P00001132,1,1,GP,24,1,No
+pilot/medium-daily,P00001133,2,2,GP + Hospital,24,1,No
+pilot/medium-daily,P00001134,3,3,GP + Hospital + Lab,24,1,No
+pilot/medium-daily,P00001135,3,2,GP + Hospital,24,1,No
+pilot/medium-daily,P00001136,2,2,GP + Hospital,24,1,No
+pilot/medium-daily,P00001137,3,3,GP + Hospital + Lab,24,1,No
+pilot/medium-daily,P00001138,2,2,GP + Hospital,24,1,No
+pilot/medium-daily,P00001139,1,1,Hospital,24,1,No
+pilot/medium-daily,P00001140,2,2,Hospital + Lab,24,1,No
+pilot/medium-daily,P00001141,1,1,Lab,24,0,No
+pilot/medium-daily,P00001142,2,2,GP + Hospital,25,1,No
+pilot/medium-daily,P00001143,1,1,GP,25,1,No
+pilot/medium-daily,P00001144,1,1,GP,25,1,No
+pilot/medium-daily,P00001145,3,3,GP + Hospital + Lab,25,1,No
+pilot/medium-daily,P00001146,2,2,GP + Hospital,25,1,No
+pilot/medium-daily,P00001147,3,2,GP + Hospital,25,1,No
+pilot/medium-daily,P00001148,3,3,GP + Hospital + Lab,25,1,No
+pilot/medium-daily,P00001149,1,1,GP,25,1,No
+pilot/medium-daily,P00001150,1,1,GP,25,1,No
+pilot/medium-daily,P00001151,1,1,GP,25,1,No
+pilot/medium-daily,P00001152,1,1,GP,25,1,No
+pilot/medium-daily,P00001153,1,1,GP,25,1,No
+pilot/medium-daily,P00001154,1,1,GP,25,1,No
+pilot/medium-daily,P00001155,2,2,GP + Hospital,25,1,No
+pilot/medium-daily,P00001156,3,2,GP + Hospital,25,1,No
+pilot/medium-daily,P00001157,1,1,Hospital,25,0,No
+pilot/medium-daily,P00001159,2,2,GP + Hospital,25,1,No
+pilot/medium-daily,P00001160,1,1,Hospital,25,0,No
+pilot/medium-daily,P00001161,3,3,GP + Hospital + Lab,25,1,No
+pilot/medium-daily,P00001162,3,2,GP + Hospital,25,1,No
+pilot/medium-daily,P00001163,2,2,GP + Hospital,25,1,No
+pilot/medium-daily,P00001164,1,1,Hospital,25,0,No
+pilot/medium-daily,P00001165,1,1,Hospital,25,1,No
+pilot/medium-daily,P00001166,2,2,Hospital + Lab,25,0,No
+pilot/medium-daily,P00001167,1,1,Lab,25,0,No
+pilot/medium-daily,P00001168,1,1,Lab,25,0,No
+pilot/medium-daily,P00001169,1,1,Lab,25,0,No
+pilot/medium-daily,P00001170,1,1,Lab,25,0,No
+pilot/medium-daily,P00001171,1,1,GP,26,1,No
+pilot/medium-daily,P00001172,2,2,GP + Hospital,26,1,No
+pilot/medium-daily,P00001173,1,1,GP,26,1,No
+pilot/medium-daily,P00001174,1,1,GP,26,1,No
+pilot/medium-daily,P00001175,1,1,GP,26,1,No
+pilot/medium-daily,P00001176,1,1,GP,26,1,No
+pilot/medium-daily,P00001177,1,1,GP,26,1,No
+pilot/medium-daily,P00001178,2,2,GP + Hospital,26,1,No
+pilot/medium-daily,P00001179,1,1,Hospital,26,1,No
+pilot/medium-daily,P00001180,1,1,Lab,26,0,No
+pilot/medium-daily,P00001181,1,1,Lab,26,0,No
+pilot/medium-daily,P00001182,1,1,Lab,26,0,No
+pilot/medium-daily,P00001183,1,1,Lab,26,0,No
+pilot/medium-daily,P00001184,1,1,GP,27,1,No
+pilot/medium-daily,P00001185,1,1,GP,27,1,No
+pilot/medium-daily,P00001186,1,1,GP,27,0,No
+pilot/medium-daily,P00001187,1,1,GP,27,1,No
+pilot/medium-daily,P00001188,2,2,GP + Hospital,27,1,No
+pilot/medium-daily,P00001189,1,1,GP,27,1,No
+pilot/medium-daily,P00001190,1,1,GP,27,1,No
+pilot/medium-daily,P00001191,2,2,GP + Hospital,27,1,No
+pilot/medium-daily,P00001192,2,2,GP + Hospital,27,1,No
+pilot/medium-daily,P00001193,1,1,GP,27,1,No
+pilot/medium-daily,P00001194,1,1,GP,27,1,No
+pilot/medium-daily,P00001195,1,1,GP,27,1,No
+pilot/medium-daily,P00001196,2,2,GP + Hospital,27,1,No
+pilot/medium-daily,P00001197,1,1,Hospital,27,1,No
+pilot/medium-daily,P00001198,1,1,Hospital,27,1,No
+pilot/medium-daily,P00001199,1,1,Hospital,27,1,No
+pilot/medium-daily,P00001200,1,1,Lab,27,0,No
+pilot/medium-daily,P00001201,1,1,Lab,27,0,No
+pilot/medium-daily,P00001202,2,2,GP + Lab,28,1,No
+pilot/medium-daily,P00001204,1,1,GP,28,1,No
+pilot/medium-daily,P00001205,1,1,GP,28,1,No
+pilot/medium-daily,P00001206,2,2,GP + Hospital,28,1,No
+pilot/medium-daily,P00001207,1,1,GP,28,1,No
+pilot/medium-daily,P00001208,1,1,GP,28,1,No
+pilot/medium-daily,P00001209,1,1,GP,28,1,No
+pilot/medium-daily,P00001210,1,1,GP,28,1,No
+pilot/medium-daily,P00001211,1,1,Lab,28,0,No
+pilot/medium-daily,P00001212,1,1,Lab,28,1,No
+pilot/medium-daily,P00001213,2,2,GP + Lab,28,1,No
+pilot/medium-daily,P00001214,1,1,Lab,28,0,No
+pilot/medium-daily,P00001215,1,1,GP,29,1,No
+pilot/medium-daily,P00001216,1,1,GP,29,1,No
+pilot/medium-daily,P00001217,1,1,GP,29,1,No
+pilot/medium-daily,P00001218,2,1,GP,29,1,No
+pilot/medium-daily,P00001219,1,1,GP,29,0,No
+pilot/medium-daily,P00001220,1,1,GP,29,1,No
+pilot/medium-daily,P00001221,2,2,GP + Hospital,29,1,No
+pilot/medium-daily,P00001222,1,1,GP,29,1,No
+pilot/medium-daily,P00001223,1,1,GP,29,1,No
+pilot/medium-daily,P00001224,1,1,Hospital,29,1,No
+pilot/medium-daily,P00001225,1,1,Hospital,29,1,No
+pilot/medium-daily,P00001226,1,1,Hospital,29,1,No
+pilot/medium-daily,P00001227,1,1,Hospital,29,1,No
+pilot/medium-daily,P00001228,1,1,Lab,29,0,No
+pilot/medium-daily,P00001229,1,1,Lab,29,0,No
+pilot/medium-daily,P00001230,1,1,Lab,29,0,No
+pilot/medium-daily,P00001231,1,1,Lab,29,0,No
+pilot/medium-daily,P00001232,1,1,Lab,29,0,No
+pilot/medium-daily,P00001233,1,1,Lab,29,0,No
+pilot/medium-daily,P00001234,1,1,GP,30,1,No
+pilot/medium-daily,P00001235,1,1,GP,30,0,No
+pilot/medium-daily,P00001236,1,1,GP,30,1,No
+pilot/medium-daily,P00001237,1,1,GP,30,1,No
+pilot/medium-daily,P00001238,1,1,GP,30,1,No
+pilot/medium-daily,P00001239,1,1,GP,30,1,No
+pilot/medium-daily,P00001240,2,1,GP,30,1,No
+pilot/medium-daily,P00001241,1,1,GP,30,1,No
+pilot/medium-daily,P00001242,1,1,GP,30,1,No
+pilot/medium-daily,P00001243,2,2,Hospital + Lab,9,0,No
+pilot/medium-daily,P00001244,1,1,Lab,30,1,No
+pilot/medium-daily,P00001245,1,1,Lab,30,0,No
+pilot/medium-daily,P00001246,1,1,Lab,30,0,No

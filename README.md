@@ -2,7 +2,7 @@
 
 Finding the same person across messy health records, using synthetic data, data-quality checks, Splink and Airflow.
 
-**Status:** In development. Steps 1 to 7 of 9 are built, and the linkage results below are final. The daily Airflow pipeline has only been run on the small pilot so far.
+**Status:** In development. Steps 1 to 7 of 9 are built, and the BI marts for step 8 are done, with the Power BI report still to build, and the linkage results below are final. The daily Airflow pipeline has only been run on the small pilot so far.
 
 | At a glance | |
 |---|---|
@@ -74,6 +74,9 @@ Airflow runs as one container using about 1.0 GB idle and 1.4 GB at peak on the 
 
 `make spark` fails if a single value differs from `staging.records`. The output was identical on all seven datasets compared: `pilot/medium` and every error level of `train` and `tune`, up to 26,600 records. The held-out `test` population was left out. It takes about 22 seconds for 26,000 records and 21 seconds for 2,500, so nearly all of that time is Spark's fixed overhead.
 
+## BI marts
+`sql/marts.sql` defines reporting views for records, people, quality checks per load attempt, run history and the review queue. `make marts` exports them, with the final results, to `powerbi/data/`, and [`powerbi/README.md`](powerbi/README.md) explains how to build the report. The views carry keys, flags and counts only, and a test fails if a name, date of birth, address or NHS number column appears in one.
+
 ## Run it
 ```bash
 uv sync
@@ -97,7 +100,7 @@ make linkage TRAIN=train/medium EVAL=test/medium THRESHOLD=0.99 FINAL=1
 The last command refuses to run a second time for the same dataset, because the test population is used once.
 
 ## Next steps
-- Step 8: BI marts and a Power BI report
+- Step 8: build the Power BI report from the exported marts
 - Step 9: finish the documentation and add a screenshot
 - Run the daily Airflow pipeline at full population size
 
