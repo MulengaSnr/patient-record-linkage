@@ -2,14 +2,14 @@
 
 Finding the same person across messy health records, using synthetic data, data-quality checks, Splink and Airflow.
 
-**Status:** In development. Steps 1 to 7 of 9 are built, and the BI marts for step 8 are done, with the Power BI report still to build, and the linkage results below are final. The daily Airflow pipeline has only been run on the small pilot so far.
+**Status:** In development. Steps 1 to 8 of 9 are built, and the linkage results below are final. The daily Airflow pipeline has only been run on the small pilot so far.
 
 | At a glance | |
 |---|---|
 | **Problem** | Finding the same patient across hospital, GP and laboratory records without merging different people |
 | **Data** | Synthetic: three independent Synthea populations of about 11,500 people, with errors injected at three levels |
 | **Result** | Medium error, held-out test set: **99.90% precision and 96.34% recall**, against 99.22% and 85.81% for exact-match rules |
-| **Stack** | Python, Splink 5 on DuckDB, PostgreSQL 17, Airflow 3.3, PySpark 4, Docker |
+| **Stack** | Python, Splink 5 on DuckDB, PostgreSQL 17, Airflow 3.3, PySpark 4, Shiny, Docker |
 
 ## The problem
 The same patient often appears under several records, because of typos, changed names, missing dates and different hospitals. Duplicates split a patient's history, and wrongly merging two people is worse. This project links records probabilistically, gives each person a stable ID, and measures how accurate the linkage is and for whom.
@@ -74,8 +74,14 @@ Airflow runs as one container using about 1.0 GB idle and 1.4 GB at peak on the 
 
 `make spark` fails if a single value differs from `staging.records`. The output was identical on all seven datasets compared: `pilot/medium` and every error level of `train` and `tune`, up to 26,600 records. The held-out `test` population was left out. It takes about 22 seconds for 26,000 records and 21 seconds for 2,500, so nearly all of that time is Spark's fixed overhead.
 
-## BI marts
-`sql/marts.sql` defines reporting views for records, people, quality checks per load attempt, run history and the review queue. `make marts` exports them, with the final results, to `powerbi/data/`, and [`powerbi/README.md`](powerbi/README.md) explains how to build the report. The views carry keys, flags and counts only, and a test fails if a name, date of birth, address or NHS number column appears in one.
+## Dashboard
+`make app` starts an interactive Shiny dashboard on <http://127.0.0.1:8050> with four pages: overview, data quality, review queue and model results.
+
+![Dashboard overview](reports/figures/dashboard-overview.png)
+
+![Dashboard data quality page](reports/figures/dashboard-data-quality.png)
+
+It reads CSV files in `app/data/`, so it needs neither the database nor Airflow. `sql/marts.sql` defines the reporting views behind them, and `make marts` rebuilds the files. The views carry keys, flags and counts only, and a test fails if a name, date of birth, address or NHS number column appears in one.
 
 ## Run it
 ```bash
@@ -88,6 +94,7 @@ make warehouse POP=pilot LEVEL=medium
 make linkage TRAIN=pilot/medium EVAL=pilot/medium
 make publish DATASET=pilot/medium
 make airflow-up        # Airflow on http://127.0.0.1:8080, then unpause the DAG
+make app               # dashboard on http://127.0.0.1:8050
 ```
 
 To reproduce the results, generate the populations with `scripts/generate_populations.sh`, which took 16 to 36 minutes each on a 4-core VM, then for each error level (low, medium and high; medium is shown):
@@ -100,8 +107,8 @@ make linkage TRAIN=train/medium EVAL=test/medium THRESHOLD=0.99 FINAL=1
 The last command refuses to run a second time for the same dataset, because the test population is used once.
 
 ## Next steps
-- Step 8: build the Power BI report from the exported marts
-- Step 9: finish the documentation and add a screenshot
+- Step 9: finish the documentation and runbook
+- Host the dashboard online
 - Run the daily Airflow pipeline at full population size
 
 ## Author

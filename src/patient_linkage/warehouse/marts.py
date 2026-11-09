@@ -1,7 +1,7 @@
-"""Build the reporting views and export them as CSV files for Power BI.
+"""Build the reporting views and export them as CSV files for the dashboard.
 
-Power BI Desktop runs on Windows and this project runs in a Linux VM, so the
-report reads exported files rather than a live connection (decision D9).
+The dashboard reads exported files rather than the warehouse, so it can run
+without the database (decision D18).
 
     uv run python -m patient_linkage.warehouse.marts --dataset pilot/medium-daily
 """
@@ -40,9 +40,9 @@ RESULT_METRICS = (
     "people",
     "actual_pairs",
 )
-# Lets Power BI show levels in this order rather than alphabetically.
+# Lets charts show levels in this order rather than alphabetically.
 LEVEL_ORDER = {"low": 1, "medium": 2, "high": 3}
-DEFAULT_OUTPUT = PROJECT_ROOT / "powerbi" / "data"
+DEFAULT_OUTPUT = PROJECT_ROOT / "app" / "data"
 
 
 def apply_marts(conn: psycopg.Connection) -> None:

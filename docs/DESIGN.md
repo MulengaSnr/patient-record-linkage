@@ -36,7 +36,7 @@ This project builds a repeatable pipeline that takes messy patient records from 
  Splink on DuckDB: blocking ──► scoring ──► clustering
                                       │
                                       ▼
- PostgreSQL:  person_id map (stable) · review queue · marts ──► Power BI
+ PostgreSQL:  person_id map (stable) · review queue · marts ──► Shiny dashboard
 
  Evaluation (kept out of the pipeline): results + truth table ──► precision, recall, F1, by group
 ```
@@ -66,7 +66,7 @@ Rules are fixed here, before any results exist.
 | D6 | Stable person IDs kept in a mapping table across runs | Splink's cluster IDs change between runs, and downstream users need an ID that does not | Exposing cluster IDs directly |
 | D7 | Full re-link is the default. Incremental linkage is added only if Splink 5's experimental `predict_between` proves reliable in testing | Avoids depending on an experimental feature | Incremental linkage from the start |
 | D8 | PySpark limited to one standardisation job in local mode, outside the nightly path | Gives real PySpark evidence without overloading the VM | Spark throughout; leaving it out (Spark is a known gap) |
-| D9 | Power BI built on the Windows host from exported mart files, with screenshots and the `.pbix` committed | Power BI Desktop is Windows-only | Superset or Streamlit (Power BI is what NHS adverts ask for) |
+| D9 | **Replaced by D18.** Power BI built on the Windows host from exported mart files, with screenshots and the `.pbix` committed | Power BI Desktop is Windows-only | Superset or Streamlit (Power BI is what NHS adverts ask for) |
 | D10 | PostgreSQL 17, pinned by digest (added in step 3) | Airflow will share this server in step 6, and the older major version is the more cautious choice. Confirmed working with Airflow 3.3.2 in step 6 | PostgreSQL 18 |
 | D11 | Airflow runs as one `standalone` container, capped at 3 GB (added in step 6) | Fits the VM with room for linkage. It is a development mode, so a real deployment would run the components separately | Separate scheduler, API and DAG-processor containers (more memory) |
 | D12 | The project has its own virtual environment inside the Airflow image (added in step 6) | Airflow's pinned packages and the project's differ, for example pandas 3.0.5 and 3.1.1. Tasks call the project's commands | Installing both together (version conflicts) |
@@ -75,6 +75,7 @@ Rules are fixed here, before any results exist.
 | D15 | A failed batch keeps its check results but none of its data (added in step 6) | Corrected files reuse record IDs, so rows from a failed load would block the correction for good | Upserting raw rows (raw would no longer be as received) |
 | D16 | The PySpark job is checked value by value against `staging.records`, using native column functions and no pandas conversion (added in step 7) | Two implementations of one rule set are only useful if they are proven to agree. PySpark 4.3 warns that it does not fully support pandas 3, so the job avoids that path | Python UDFs (slower, and hide the rules from Spark); checking row counts only (would miss wrong values) |
 | D17 | Marts are views with no identifying columns, exported to committed CSV files, one row per load attempt for quality checks (added in step 8) | Views cannot go stale. Reporting does not need names or NHS numbers, so they stay in the warehouse. Attempts are kept separate so a corrected day is not counted twice, while the stopped load stays visible | Materialised tables (a refresh step for 2,500 rows); a live connection from Windows into the VM (network setup for no benefit) |
+| D18 | Interactive dashboard in Shiny for Python, reading the exported CSV files (added in step 8, replacing D9) | Same language and toolchain as the project, runs on Linux with one command, can be hosted so a reviewer can use it, and the whole app is in version control and tested. It does give up Power BI evidence, which NHS adverts often ask for | Power BI (Windows-only, a binary file, and a reviewer needs a licence or a hosted workspace); Streamlit (reruns the whole script on each input); Dash (more callback code for the same pages) |
 
 ## 7. Machine limits
 The VM has 4 cores and 7.3 GB of RAM. Measured in step 6, Airflow uses about 1.0 GB idle and peaked at 1.4 GB while processing the pilot, leaving about 2 GB available, with no out-of-memory events. At full size (about 11,500 people and 27,000 records), one linkage run peaked at about 670 MB and took about 20 seconds, so the population did not need shrinking. Airflow's memory at full size is still unmeasured.

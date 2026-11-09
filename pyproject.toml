@@ -16,6 +16,11 @@ dependencies = [
 ]
 
 [dependency-groups]
+app = [
+    "plotly>=6",
+    "shiny>=1.5",
+    "shinywidgets>=0.7",
+]
 dev = [
     "pytest>=8.3",
     "pytest-cov>=5.0",
@@ -27,7 +32,7 @@ spark = [
 
 [tool.uv]
 # The Airflow image uses --no-default-groups, so it does not install Spark.
-default-groups = ["dev", "spark"]
+default-groups = ["app", "dev", "spark"]
 
 [build-system]
 requires = ["hatchling"]

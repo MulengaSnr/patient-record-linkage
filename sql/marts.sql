@@ -1,4 +1,4 @@
--- Reporting views for Power BI. They hold no data, so rebuilding them is safe.
+-- Reporting views for the dashboard. They hold no data, so rebuilding them is safe.
 -- They carry keys and flags only: no names, dates of birth, addresses or NHS
 -- numbers leave the warehouse through this layer.
 DROP SCHEMA IF EXISTS mart CASCADE;
