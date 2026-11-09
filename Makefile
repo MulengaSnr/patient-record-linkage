@@ -1,7 +1,7 @@
 -include .env
 export
 
-.PHONY: setup lint format test check sources db-up db-down warehouse linkage publish spark marts airflow-up airflow-down airflow-resume
+.PHONY: setup lint format test check sources db-up db-down warehouse linkage publish spark marts app airflow-up airflow-down airflow-resume
 
 setup:   ## Create the virtual environment and install dependencies
 	uv sync
@@ -40,8 +40,11 @@ publish: ## Assign stable person keys and fill the review queue (DATASET=pilot/m
 spark: ## Standardise with PySpark and compare with the warehouse (POP=pilot LEVEL=low; needs Java 17 or 21)
 	uv run python -m patient_linkage.spark.standardise --population $(or $(POP),pilot) --level $(or $(LEVEL),low) --compare
 
-marts: ## Rebuild the reporting views and export them for Power BI (DATASET=pilot/medium-daily)
+marts: ## Rebuild the reporting views and export them for the dashboard (DATASET=pilot/medium-daily)
 	uv run python -m patient_linkage.warehouse.marts --dataset $(or $(DATASET),pilot/medium-daily)
+
+app: ## Start the dashboard on http://127.0.0.1:8050
+	uv run shiny run app/app.py --host 127.0.0.1 --port 8050
 
 airflow-up: ## Start Airflow on http://127.0.0.1:8080 (about 1 GB of memory)
 	docker compose --profile airflow up -d --build airflow
