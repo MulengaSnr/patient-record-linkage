@@ -2,7 +2,7 @@
 
 Finding the same person across messy health records, using synthetic data, data-quality checks, Splink and Airflow.
 
-**Status:** In development. Steps 1 to 8 of 9 are built, and the linkage results below are final. The daily Airflow pipeline has only been run on the small pilot so far.
+**Status:** Complete: all 9 planned steps are built, and the linkage results below are final. The daily Airflow pipeline has only been run on the 1,145-person pilot. It runs locally, on synthetic data, and is not deployed.
 
 | At a glance | |
 |---|---|
@@ -16,7 +16,24 @@ The same patient often appears under several records, because of typos, changed 
 
 **All data is synthetic.** No real patient data is used.
 
-Design, decisions and evaluation rules: [docs/DESIGN.md](docs/DESIGN.md).
+Design, decisions and evaluation rules: [docs/DESIGN.md](docs/DESIGN.md). Operating it: [docs/RUNBOOK.md](docs/RUNBOOK.md).
+
+## How it fits together
+```
+ Synthea + error injector ──► source files (3 systems, daily batches)
+                                      │  Airflow DAG
+                                      ▼
+ PostgreSQL:  raw ──► staging ──► data-quality gate ──(fail)──► stop and report
+                                      │ pass
+                                      ▼
+ Splink on DuckDB: blocking ──► scoring ──► clustering
+                                      │
+                                      ▼
+ PostgreSQL:  stable person keys · review queue · marts ──► Shiny dashboard
+
+ Evaluation, kept out of the pipeline: results + truth table ──► precision, recall, by group
+ Separate check: the PySpark job must reproduce the staging layer exactly
+```
 
 ## Results
 These come from the held-out test population, which was used once. The model was trained on one population without labels, and the 0.99 match-probability threshold was chosen on a second, as the lowest tested value reaching 99.5% precision. The baseline uses exact rules: the same NHS number, or the same first name, surname and date of birth.
@@ -37,8 +54,6 @@ _Precision, recall and F1 are per pair of records. "People split" is the share o
 - **Some errors are hard to recover.** At the high level, records with a wrong or missing date of birth, a first name cut to an initial, or swapped names link only 57% to 64% of the time, against 98% for records with no error.
 
 Full results: [non-technical findings](reports/findings.md) and [model card](docs/MODEL_CARD.md).
-
-**Limits:** the injected error rates are illustrative, so these figures do not predict accuracy on real NHS data, and they are not comparable with results from other datasets. Names and addresses are American.
 
 ## Warehouse and data-quality gate
 Source files are checked for shape, loaded unchanged into `raw`, then typed and standardised in `staging`. Each source's dates are parsed in that source's own format. Loading the same file twice adds nothing.
@@ -84,6 +99,8 @@ Airflow runs as one container using about 1.0 GB idle and 1.4 GB at peak on the 
 It reads CSV files in `app/data/`, so it needs neither the database nor Airflow. `sql/marts.sql` defines the reporting views behind them, and `make marts` rebuilds the files. The views carry keys, flags and counts only, and a test fails if a name, date of birth, address or NHS number column appears in one.
 
 ## Run it
+Needs Docker and [uv](https://docs.astral.sh/uv/). `make spark` also needs Java 17 or 21. To see the dashboard alone, `uv sync` and `make app` are enough.
+
 ```bash
 uv sync
 cp .env.example .env   # then choose a password
@@ -94,6 +111,8 @@ make warehouse POP=pilot LEVEL=medium
 make linkage TRAIN=pilot/medium EVAL=pilot/medium
 make publish DATASET=pilot/medium
 make airflow-up        # Airflow on http://127.0.0.1:8080, then unpause the DAG
+make spark POP=pilot LEVEL=medium   # needs Java; compares with the warehouse
+make marts             # rebuild the dashboard files
 make app               # dashboard on http://127.0.0.1:8050
 ```
 
@@ -106,10 +125,22 @@ make linkage TRAIN=train/medium EVAL=test/medium THRESHOLD=0.99 FINAL=1
 ```
 The last command refuses to run a second time for the same dataset, because the test population is used once.
 
+## Limitations
+- **Synthetic data only.** The injected error rates are illustrative, so these figures do not predict accuracy on real NHS data and cannot be compared with results from other datasets.
+- **American names and addresses.** Synthea generates them, so UK name patterns are not represented.
+- **The errors are independent by design,** which real data may not be, and the same author wrote the error injector and the model.
+- **The daily pipeline has only run on the pilot.** Airflow's memory use at full population size is unmeasured.
+- **Clerical review is incomplete.** Decisions are stored but do not change the clusters, and there is no review screen.
+- **Linkage is a full re-link each day,** which would become slow at much larger volumes (design decision D7).
+- **Airflow runs as one `standalone` container,** which is a development mode. A real deployment would run its components separately.
+- **The dashboard runs locally,** and its operational pages cover the pilot only. The model results page covers the test population.
+- **PySpark is a parity check, not a scale test.** It ran on up to 26,600 records in local mode, on one machine.
+
 ## Next steps
-- Step 9: finish the documentation and runbook
-- Host the dashboard online
+- Feed clerical review decisions back into the clusters, and add a review screen
 - Run the daily Airflow pipeline at full population size
+- Host the dashboard online
+- Test with UK-style names and addresses
 
 ## Author
 **Enock Mulenga**, Data Scientist · [LinkedIn](https://www.linkedin.com/in/enock-mulenga-8472ba137) · [Portfolio](https://mulengasnr.github.io)
