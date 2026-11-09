@@ -2,6 +2,10 @@
 
 Finding the same person across messy health records, using synthetic data, data-quality checks, Splink and Airflow.
 
+![CI](https://github.com/MulengaSnr/patient-record-linkage/actions/workflows/ci.yml/badge.svg)
+![Python](https://img.shields.io/badge/python-3.12-blue)
+![Licence](https://img.shields.io/badge/licence-MIT-green)
+
 **Status:** Complete: all 9 planned steps are built, and the linkage results below are final. The daily Airflow pipeline has only been run on the 1,145-person pilot. It runs locally, on synthetic data, and is not deployed.
 
 | At a glance | |
@@ -12,7 +16,7 @@ Finding the same person across messy health records, using synthetic data, data-
 | **Stack** | Python, Splink 5 on DuckDB, PostgreSQL 17, Airflow 3.3, PySpark 4, Shiny, Docker |
 
 ## The problem
-The same patient often appears under several records, because of typos, changed names, missing dates and different hospitals. Duplicates split a patient's history, and wrongly merging two people is worse. This project links records probabilistically, gives each person a stable ID, and measures how accurate the linkage is and for whom.
+The same patient often appears under several records, because of typos, changed names, missing dates and different hospitals. Duplicates split a patient's history, and wrongly merging two people is worse. This project links records probabilistically, gives each person a stable ID, and measures how accurate the linkage is and for whom. The decision it supports: a data-quality lead choosing which records can be linked automatically, and how much manual review to fund.
 
 **All data is synthetic.** No real patient data is used.
 
