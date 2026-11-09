@@ -3,7 +3,7 @@
 Status of this project, last reviewed 9 November 2026. An unticked item says why.
 
 ## Plan
-- [ ] Business problem and decision-maker written down: the problem is, but no decision-maker is named
+- [x] Business problem and decision-maker written down
 - [x] Technical objectives and success metric (with baseline) defined
 - [x] Dataset chosen; licence checked and recorded in `data/README.md`
 - [x] Architecture sketched in README

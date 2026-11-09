@@ -7,6 +7,8 @@ Health systems hold the same person under several records: a typo at registratio
 
 This project builds a repeatable pipeline that takes messy patient records from several sources, checks their quality, links them with probabilistic matching, and gives each person a stable identifier. It also measures how accurate the linkage is, including for which groups it works less well.
 
+**The decision it supports:** a data-quality lead choosing which records can be linked automatically, and how much manual review to fund.
+
 **Why it matters for this portfolio:** record linkage is the strongest skill on the CV, but that work used confidential data. This project shows the same skill in public on synthetic data.
 
 **What it does not prove:** the 99.8% deduplication figure from professional work. Accuracy here depends on how much error is injected, so results are reported at several error levels and are not presented as comparable with that figure.
